@@ -1,0 +1,145 @@
+2019-08-27 12:54:01,099 [1] ERROR [ZtTools.Tools(600)] :
+ System.OutOfMemoryException: 内存不足。
+   在 System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   在 System.Drawing.Image.FromFile(String filename)
+   在 LSRS.FrmLSRS.FrmLSRS_Load(Object sender, EventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 64 
+ ====================================================================================================  
+2019-08-27 12:54:35,364 [10] ERROR [ZtTools.Tools(600)] :
+ System.OutOfMemoryException: 内存不足。
+   在 System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   在 System.Drawing.Image.FromFile(String filename)
+   在 LSRS.FrmLSRS.FrmLSRS_Load(Object sender, EventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 64 
+ ====================================================================================================  
+2019-08-27 13:28:29,312 [9] ERROR [ZtTools.Tools(600)] :
+ System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.Convert.ToInt32(String value)
+   在 LSRS.FrmLSRS.timer1_Tick(Object sender, EventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 546 
+ ====================================================================================================  
+2019-08-27 13:28:44,934 [10] ERROR [ZtTools.Tools(600)] :
+ System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.Convert.ToInt32(String value)
+   在 LSRS.FrmLSRS.timer1_Tick(Object sender, EventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 546 
+ ====================================================================================================  
+2019-08-27 13:36:08,660 [8] ERROR [ZtTools.Tools(600)] :
+ System.OverflowException: 算术运算导致溢出。
+   在 DotNet.Utilities.FTPHelper.FileToStream(String fileName) 位置 E:\LSRS\LSRS\LSRS\FTP\FTPHelper.cs:行号 510
+   在 LSRS.FrmLSRS.treeView1_NodeMouseDoubleClick(Object sender, TreeNodeMouseClickEventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 242 
+ ====================================================================================================  
+2019-08-27 13:41:32,992 [10] ERROR [ZtTools.Tools(600)] :
+ System.ArgumentException: 参数无效。
+   在 System.Drawing.Image.FromStream(Stream stream, Boolean useEmbeddedColorManagement, Boolean validateImageData)
+   在 System.Drawing.Image.FromStream(Stream stream)
+   在 LSRS.FrmLSRS.FrmLSRS_Load(Object sender, EventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 65 
+ ====================================================================================================  
+2019-08-27 13:56:45,395 [9] ERROR [ZtTools.Tools(600)] :
+ System.ArgumentException: 偏移量和长度超出数组的界限，或者计数大于从索引到源集合结尾处的元素数量。
+   在 System.IO.FileStream.Read(Byte[] array, Int32 offset, Int32 count)
+   在 DotNet.Utilities.FTPHelper.FileToStream(String fileName) 位置 E:\LSRS\LSRS\LSRS\FTP\FTPHelper.cs:行号 515
+   在 LSRS.FrmLSRS.FrmLSRS_Load(Object sender, EventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 64 
+ ====================================================================================================  
+2019-08-27 13:57:50,996 [10] ERROR [ZtTools.Tools(600)] :
+ System.ArgumentException: 偏移量和长度超出数组的界限，或者计数大于从索引到源集合结尾处的元素数量。
+   在 System.IO.FileStream.Read(Byte[] array, Int32 offset, Int32 count)
+   在 DotNet.Utilities.FTPHelper.FileToStream(String fileName) 位置 E:\LSRS\LSRS\LSRS\FTP\FTPHelper.cs:行号 515
+   在 LSRS.FrmLSRS.FrmLSRS_Load(Object sender, EventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 64 
+ ====================================================================================================  
+2019-08-27 13:59:33,282 [8] ERROR [ZtTools.Tools(600)] :
+ System.ArgumentException: 偏移量和长度超出数组的界限，或者计数大于从索引到源集合结尾处的元素数量。
+   在 System.IO.FileStream.Read(Byte[] array, Int32 offset, Int32 count)
+   在 DotNet.Utilities.FTPHelper.FileToStream(String fileName) 位置 E:\LSRS\LSRS\LSRS\FTP\FTPHelper.cs:行号 516
+   在 LSRS.FrmLSRS.FrmLSRS_Load(Object sender, EventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 64 
+ ====================================================================================================  
+2019-08-27 17:52:37,999 [9] ERROR [ZtTools.Tools(600)] :
+ System.ArgumentException: 源数组长度不足。请检查 srcIndex 和长度以及数组的下限。
+   在 System.Array.Copy(Array sourceArray, Int32 sourceIndex, Array destinationArray, Int32 destinationIndex, Int32 length, Boolean reliable)
+   在 System.Array.Copy(Array sourceArray, Int32 sourceIndex, Array destinationArray, Int32 destinationIndex, Int32 length)
+   在 DotNet.Utilities.FTPHelper.FileToStream(String fileName) 位置 E:\LSRS\LSRS\LSRS\FTP\FTPHelper.cs:行号 516
+   在 LSRS.FrmLSRS.FrmLSRS_Load(Object sender, EventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 64 
+ ====================================================================================================  
+2019-08-27 17:52:47,640 [10] ERROR [ZtTools.Tools(600)] :
+ System.ArgumentException: 源数组长度不足。请检查 srcIndex 和长度以及数组的下限。
+   在 System.Array.Copy(Array sourceArray, Int32 sourceIndex, Array destinationArray, Int32 destinationIndex, Int32 length, Boolean reliable)
+   在 System.Array.Copy(Array sourceArray, Int32 sourceIndex, Array destinationArray, Int32 destinationIndex, Int32 length)
+   在 DotNet.Utilities.FTPHelper.FileToStream(String fileName) 位置 E:\LSRS\LSRS\LSRS\FTP\FTPHelper.cs:行号 516
+   在 LSRS.FrmLSRS.FrmLSRS_Load(Object sender, EventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 64 
+ ====================================================================================================  
+2019-08-27 17:54:52,216 [10] ERROR [ZtTools.Tools(600)] :
+ System.ArgumentException: 目标数组的长度不够。请检查 destIndex 和长度以及数组的下限。
+   在 System.Array.Copy(Array sourceArray, Int32 sourceIndex, Array destinationArray, Int32 destinationIndex, Int32 length, Boolean reliable)
+   在 System.Array.Copy(Array sourceArray, Int32 sourceIndex, Array destinationArray, Int32 destinationIndex, Int32 length)
+   在 DotNet.Utilities.FTPHelper.FileToStream(String fileName) 位置 E:\LSRS\LSRS\LSRS\FTP\FTPHelper.cs:行号 522
+   在 LSRS.FrmLSRS.FrmLSRS_Load(Object sender, EventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 64 
+ ====================================================================================================  
+2019-08-27 18:54:56,025 [10] ERROR [ZtTools.Tools(600)] :
+ System.OverflowException: 算术运算导致溢出。
+   在 DotNet.Utilities.FTPHelper.FileToStream(String fileName) 位置 E:\LSRS\LSRS\LSRS\FTP\FTPHelper.cs:行号 514
+   在 LSRS.FrmLSRS.treeView1_NodeMouseDoubleClick(Object sender, TreeNodeMouseClickEventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 242 
+ ====================================================================================================  
+2019-08-27 18:55:25,398 [9] ERROR [ZtTools.Tools(600)] :
+ System.OverflowException: 算术运算导致溢出。
+   在 DotNet.Utilities.FTPHelper.FileToStream(String fileName) 位置 E:\LSRS\LSRS\LSRS\FTP\FTPHelper.cs:行号 514
+   在 LSRS.FrmLSRS.treeView1_NodeMouseDoubleClick(Object sender, TreeNodeMouseClickEventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 242 
+ ====================================================================================================  
+2019-08-27 19:52:09,551 [10] ERROR [ZtTools.Tools(600)] :
+ System.IO.FileNotFoundException: 未能找到文件“E:\LSRS\LSRS\LSRS\bin\Debug\目录树\A\胡琦琦2019周报.xlsx”。
+文件名:“E:\LSRS\LSRS\LSRS\bin\Debug\目录树\A\胡琦琦2019周报.xlsx”
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   在 DotNet.Utilities.FTPHelper.FileToStream(String fileName) 位置 E:\LSRS\LSRS\LSRS\FTP\FTPHelper.cs:行号 518
+   在 LSRS.FrmLSRS.treeView1_NodeMouseDoubleClick(Object sender, TreeNodeMouseClickEventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 245 
+ ====================================================================================================  
+2019-08-27 19:53:16,033 [10] ERROR [ZtTools.Tools(600)] :
+ System.IO.FileNotFoundException: 未能找到文件“E:\LSRS\LSRS\LSRS\bin\Debug\目录树\A\胡琦琦2019周报.xlsx”。
+文件名:“E:\LSRS\LSRS\LSRS\bin\Debug\目录树\A\胡琦琦2019周报.xlsx”
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   在 DotNet.Utilities.FTPHelper.FileToStream(String fileName) 位置 E:\LSRS\LSRS\LSRS\FTP\FTPHelper.cs:行号 518
+   在 LSRS.FrmLSRS.treeView1_NodeMouseDoubleClick(Object sender, TreeNodeMouseClickEventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 245 
+ ====================================================================================================  
+2019-08-27 19:54:04,448 [10] ERROR [ZtTools.Tools(600)] :
+ System.IO.FileNotFoundException: 未能找到文件“E:\LSRS\LSRS\LSRS\bin\Debug\目录树\A\胡琦琦2019周报.xlsx”。
+文件名:“E:\LSRS\LSRS\LSRS\bin\Debug\目录树\A\胡琦琦2019周报.xlsx”
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   在 DotNet.Utilities.FTPHelper.FileToStream(String fileName) 位置 E:\LSRS\LSRS\LSRS\FTP\FTPHelper.cs:行号 518
+   在 LSRS.FrmLSRS.treeView1_NodeMouseDoubleClick(Object sender, TreeNodeMouseClickEventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 245 
+ ====================================================================================================  
+2019-08-27 19:57:28,214 [9] ERROR [ZtTools.Tools(600)] :
+ System.IO.FileNotFoundException: 未能找到文件“E:\LSRS\LSRS\LSRS\bin\Debug\目录树\A\胡琦琦2019周报.xlsx”。
+文件名:“E:\LSRS\LSRS\LSRS\bin\Debug\目录树\A\胡琦琦2019周报.xlsx”
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   在 DotNet.Utilities.FTPHelper.FileToStream(String fileName) 位置 E:\LSRS\LSRS\LSRS\FTP\FTPHelper.cs:行号 518
+   在 LSRS.FrmLSRS.treeView1_NodeMouseDoubleClick(Object sender, TreeNodeMouseClickEventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 245 
+ ====================================================================================================  
+2019-08-27 20:03:23,850 [10] ERROR [ZtTools.Tools(600)] :
+ System.IO.IOException: 文件“E:\LSRS\LSRS\LSRS\bin\Debug\目录树\C\SX\Agilent_N9020A中文使用说明.pdf”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileInfo.Delete()
+   在 DotNet.Utilities.FTPHelper.Download(String filePath, String fileName) 位置 E:\LSRS\LSRS\LSRS\FTP\FTPHelper.cs:行号 119
+   在 LSRS.FrmLSRS.treeView1_NodeMouseDoubleClick(Object sender, TreeNodeMouseClickEventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 231 
+ ====================================================================================================  
+2019-08-27 20:03:29,889 [10] ERROR [ZtTools.Tools(600)] :
+ System.IO.IOException: 文件“E:\LSRS\LSRS\LSRS\bin\Debug\目录树\C\SX\Agilent_N9020A中文使用说明.pdf”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileInfo.Delete()
+   在 DotNet.Utilities.FTPHelper.Download(String filePath, String fileName) 位置 E:\LSRS\LSRS\LSRS\FTP\FTPHelper.cs:行号 119
+   在 LSRS.FrmLSRS.treeView1_NodeMouseDoubleClick(Object sender, TreeNodeMouseClickEventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 231 
+ ====================================================================================================  
+2019-08-27 22:14:51,208 [9] ERROR [ZtTools.Tools(600)] :
+ System.IO.FileNotFoundException: Could not find file 'C:\Users\Administrator\Desktop\LSRS\LSRS\LSRS\bin\Debug\Temp\广告.png'.
+File name: 'C:\Users\Administrator\Desktop\LSRS\LSRS\LSRS\bin\Debug\Temp\广告.png'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at DotNet.Utilities.FTPHelper.FileToStream(String fileName) in C:\Users\Administrator\Desktop\LSRS\LSRS\LSRS\FTP\FTPHelper.cs:line 619
+   at LSRS.FrmLSRS.FrmLSRS_Load(Object sender, EventArgs e) in C:\Users\Administrator\Desktop\LSRS\LSRS\LSRS\FrmLSRS.cs:line 66 
+ ====================================================================================================  

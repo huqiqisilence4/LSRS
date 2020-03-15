@@ -1,0 +1,7 @@
+C:\Users\Administrator\Desktop\LSRS\InstallCompenent\bin\Debug\InstallCompenent.exe
+C:\Users\Administrator\Desktop\LSRS\InstallCompenent\bin\Debug\InstallCompenent.pdb
+C:\Users\Administrator\Desktop\LSRS\InstallCompenent\obj\x86\Debug\InstallCompenent.exe
+C:\Users\Administrator\Desktop\LSRS\InstallCompenent\obj\x86\Debug\InstallCompenent.pdb
+C:\Users\Administrator\Desktop\LSRS\InstallCompenent\bin\Debug\InstallCompenent.exe.config
+C:\Users\Administrator\Desktop\LSRS\InstallCompenent\obj\x86\Debug\Interop.IWshRuntimeLibrary.dll
+C:\Users\Administrator\Desktop\LSRS\InstallCompenent\obj\x86\Debug\InstallCompenent.csproj.ResolveComReference.cache

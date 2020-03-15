@@ -1,0 +1,16 @@
+2019-09-17 21:10:09,789 [9] ERROR [ZtTools.Tools(600)] :
+ System.UriFormatException: Invalid URI: The format of the URI could not be determined.
+   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   at System.Uri..ctor(String uriString)
+   at LSRS.FrmLSRS.treeList1_FocusedNodeChanged(Object sender, FocusedNodeChangedEventArgs e) in C:\Users\Administrator\Desktop\LSRS\LSRS\FrmLSRS.cs:line 1444 
+ ====================================================================================================  
+2019-09-17 21:10:58,355 [9] ERROR [ZtTools.Tools(600)] :
+ System.ArgumentException: Input data is not recognized as valid pdf.
+   at DevExpress.Pdf.Native.PdfDocumentStructureReader.ThrowIncorrectDataException()
+   at DevExpress.Pdf.Native.PdfDocumentReader.GetVersion(PdfDocumentStream streamReader)
+   at DevExpress.Pdf.Native.PdfDocumentReader..ctor(PdfDocumentStream documentStream, PdfGetPasswordAction getPasswordAction, Boolean isInvalid)
+   at DevExpress.Pdf.Native.PdfDocumentReader.Read(Stream stream, Boolean detachStreamAfterLoadComplete, PdfGetPasswordAction getPasswordAction)
+   at DevExpress.XtraPdfViewer.PdfViewer.LoadDocument(Stream stream, String path, Boolean resetRotateAndZoom)
+   at DevExpress.XtraPdfViewer.PdfViewer.LoadDocument(Stream stream)
+   at LSRS.FrmLSRS.treeList1_FocusedNodeChanged(Object sender, FocusedNodeChangedEventArgs e) in C:\Users\Administrator\Desktop\LSRS\LSRS\FrmLSRS.cs:line 1431 
+ ====================================================================================================  

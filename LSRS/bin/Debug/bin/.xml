@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ZtTools</name>
+    </assembly>
+    <members>
+        <member name="T:ZtTools.IniClass">
+            <summary>
+             配置文件操作类
+            </summary>
+        </member>
+        <member name="F:ZtTools.IniClass.iniPath">
+            <summary>
+            配置文件路径
+            </summary>
+        </member>
+        <member name="M:ZtTools.IniClass.#ctor(System.String)">
+            <summary> 
+            构造方法 
+            </summary> 
+            <param name="iniPath">文件路径</param> 
+        </member>
+        <member name="M:ZtTools.IniClass.IniWriteValue(System.String,System.String,System.String)">
+            <summary> 
+            写入INI文件 
+            </summary> 
+            <param name="Section">项目名称(如 [TypeName] )</param> 
+            <param name="Key">键</param> 
+            <param name="Value">值</param> 
+        </member>
+        <member name="M:ZtTools.IniClass.IniReadValue(System.String,System.String)">
+            <summary> 
+            读出INI文件 
+            </summary> 
+            <param name="Section">项目名称(如 [TypeName] )</param> 
+            <param name="Key">键</param> 
+        </member>
+        <member name="M:ZtTools.IniClass.ExistIniFile">
+            <summary> 
+            验证文件是否存在 
+            </summary> 
+            <returns>布尔值</returns> 
+        </member>
+        <member name="M:ZtTools.SaveTxtOpt.Debug(System.String)">
+            <summary>
+             Debug日志信息
+            </summary>
+            <param name="debugInfo"></param>
+        </member>
+        <member name="M:ZtTools.SaveTxtOpt.OpenFile">
+            <summary>
+             打开文件
+            </summary>
+        </member>
+        <member name="T:ZtTools.Tools">
+            <summary>
+             工具类
+            </summary>
+        </member>
+        <member name="F:ZtTools.Tools.Logger">
+            <summary>
+             日志对象
+            </summary>
+        </member>
+        <member name="F:ZtTools.Tools.isLoadSuccess">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="M:ZtTools.Tools.TransColor(System.Int32)">
+            <summary>
+            转换成Color根据nNum(int ARGB)
+            </summary>
+            <param name="nStr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZtTools.Tools.TransColor(System.String,System.Drawing.Color,System.Boolean)">
+            <summary>
+            转换成Color根据nStr(nStr为'#FF0000'),
+            nDefaultColor:转换失败，返回的缺省颜色,
+            nShowErrorMsg:当转换失败时,是否显示错误消息框
+            </summary>
+            <param name="nStr">#FF0000</param>
+            <param name="nDefaultColor">转换失败，返回的缺省颜色</param>
+            <param name="nShowErrorMsg">当转换失败时,是否显示错误消息框</param>
+            <returns></returns>
+        </member>
+        <member name="M:ZtTools.Tools.IsDecNum(System.String)">
+            <summary>
+            nStr是否可以转为10进制double或long
+            </summary>
+            <param name="nStr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZtTools.Tools.GetXmlAttValue(System.String,System.Xml.Linq.XElement,System.String@)">
+            <summary>
+            得到某个Element的指定属性名称的属性值（如果属性名称不存在或属性值为空均报错nErrorMsg）
+            </summary>
+            <param name="nAttName"></param>
+            <param name="nElement"></param>
+            <param name="nErrorMsg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZtTools.Tools.ReadFileByLine(System.String,System.Collections.Generic.List{System.String}@)">
+            <summary>
+            读取文件(按照文件的行)
+            </summary>
+            <param name="nPath"></param>
+            <param name="nStrList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZtTools.Tools.FormatFrame(System.String@,System.Int32)">
+            <summary>
+            根据帧的长度格式化帧(nFrameHexStr:16进制字符串，nFrameByteLen:指定此帧的长度)
+            </summary>
+            <param name="nFrameWordLen"></param>
+        </member>
+        <member name="M:ZtTools.Tools.ReadFile(System.String,System.Int32,System.String@)">
+            <summary>
+            读取文件，按照nByteLen将文件字节数组进行切分
+            </summary>
+            <param name="nPath"></param>
+            <param name="nByteLen"></param>
+            <param name="nMsg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZtTools.Tools.WriteToTxt(System.String,System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            写入
+            </summary>
+            <param name="nPath">文件夹路径</param>
+            <param name="fileName">文件后缀名名称</param>
+            <param name="nWriteStrList">写入List</param>
+            <param name="singleFileSize">单个文件大小（单位：M）</param>
+        </member>
+        <member name="M:ZtTools.Tools.DataTableToXml(System.String,System.Data.DataTable)">
+            <summary>
+            按照path生成本地XML文档，Xml.root.Attributes[ColNames]存储DataTable列名，用分号分隔,
+            Xml.root.Attributes[Count]存储DataTable.Rows.Count
+            DataTable.tableName不能等于""
+            <param name="path">本地路径</param>
+            </summary>
+        </member>
+        <member name="M:ZtTools.Tools.XmlToDataTable(System.String)">
+            <summary>
+            按照path读取本地XML文档，根据Xml.root.Attributes[ColNames]新建DataTable列名（typeof（String））,
+            根据Xml.root.Attributes[Count]读取root.ChildNode
+            <param name="path">本地路径</param>
+            </summary>
+        </member>
+        <member name="M:ZtTools.Tools.Debug(System.String)">
+            <summary>
+             Debug日志信息
+            </summary>
+            <param name="debugInfo"></param>
+        </member>
+        <member name="M:ZtTools.Tools.Info(System.String)">
+            <summary>
+            操作信息日志记录
+            </summary>
+            <param name="info"></param>
+        </member>
+        <member name="M:ZtTools.Tools.Fatal(System.String)">
+            <summary>
+            致命错误信息
+            </summary>
+            <param name="fatal"></param>
+        </member>
+        <member name="M:ZtTools.Tools.Warn(System.String)">
+            <summary>
+            警告信息
+            </summary>
+            <param name="warn"></param>
+        </member>
+        <member name="M:ZtTools.Tools.Error(System.String)">
+            <summary>
+            错误信息
+            </summary>
+            <param name="warn"></param>
+        </member>
+        <member name="M:ZtTools.Tools.LogXml(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+             
+            </summary>
+            <param name="sendParam"></param>
+        </member>
+        <member name="M:ZtTools.Tools.TryGetMaxGcd(System.Collections.Generic.List{System.Int32},System.Int32@)">
+            <summary>
+            尝试得到最大公约数
+            </summary>
+            <param name="nNumList"></param>
+            <param name="nGcdNum"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZtTools.Tools.SaveBinByByte(System.Byte[],System.String)">
+            <summary>
+            
+            </summary>
+            <param name="data"></param>
+            <param name="filePath"></param>
+        </member>
+    </members>
+</doc>

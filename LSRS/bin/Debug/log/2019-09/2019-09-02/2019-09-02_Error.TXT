@@ -1,0 +1,45 @@
+2019-09-02 20:13:39,582 [9] ERROR [ZtTools.Tools(600)] :
+ System.UriFormatException: Invalid URI: The format of the URI could not be determined.
+   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   at System.Uri..ctor(String uriString)
+   at LSRS.FrmLSRS.btnLargeDefaultPage_ItemClick(Object sender, ItemClickEventArgs e) in C:\Users\Administrator\Desktop\LSRS\LSRS\FrmLSRS.cs:line 157 
+ ====================================================================================================  
+2019-09-02 20:53:14,887 [9] ERROR [ZtTools.Tools(600)] :
+ System.Net.WebException: The remote server returned an error: 227 Entering Passive Mode (101,200,209,26,156,67).
+. ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 101.200.209.26:40003
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Net.FtpControlStream.QueueOrCreateDataConection(PipelineEntry entry, ResponseDescription response, Boolean timeout, Stream& stream, Boolean& isSocketReady)
+   at System.Net.FtpControlStream.PipelineCallback(PipelineEntry entry, ResponseDescription response, Boolean timeout, Stream& stream)
+   at System.Net.CommandStream.PostReadCommandProcessing(Stream& stream)
+   at System.Net.CommandStream.PostSendCommandProcessing(Stream& stream)
+   at System.Net.CommandStream.ContinueCommandPipeline()
+   at System.Net.CommandStream.SubmitRequest(WebRequest request, Boolean async, Boolean readInitalResponseOnConnect)
+   at System.Net.FtpWebRequest.TimedSubmitRequestHelper(Boolean async)
+   at System.Net.FtpWebRequest.SubmitRequest(Boolean async)
+   --- End of inner exception stack trace ---
+   at DotNet.Utilities.FTPHelper.GetFileList(String url) in C:\Users\Administrator\Desktop\LSRS\LSRS\FTP\FTPHelper.cs:line 475
+   at LSRS.FrmLSRS.InitInfo() in C:\Users\Administrator\Desktop\LSRS\LSRS\FrmLSRS.cs:line 728
+   at LSRS.FrmLSRS.FrmLSRS_Load(Object sender, EventArgs e) in C:\Users\Administrator\Desktop\LSRS\LSRS\FrmLSRS.cs:line 127 
+ ====================================================================================================  
+2019-09-02 21:27:34,627 [8] ERROR [ZtTools.Tools(600)] :
+ System.Net.WebException: The remote server returned an error: 227 Entering Passive Mode (101,200,209,26,156,67).
+. ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 101.200.209.26:40003
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Net.FtpControlStream.QueueOrCreateDataConection(PipelineEntry entry, ResponseDescription response, Boolean timeout, Stream& stream, Boolean& isSocketReady)
+   at System.Net.FtpControlStream.PipelineCallback(PipelineEntry entry, ResponseDescription response, Boolean timeout, Stream& stream)
+   at System.Net.CommandStream.PostReadCommandProcessing(Stream& stream)
+   at System.Net.CommandStream.PostSendCommandProcessing(Stream& stream)
+   at System.Net.CommandStream.ContinueCommandPipeline()
+   at System.Net.CommandStream.SubmitRequest(WebRequest request, Boolean async, Boolean readInitalResponseOnConnect)
+   at System.Net.FtpWebRequest.TimedSubmitRequestHelper(Boolean async)
+   at System.Net.FtpWebRequest.SubmitRequest(Boolean async)
+   --- End of inner exception stack trace ---
+   at DotNet.Utilities.FTPHelper.GetFileList(String url) in C:\Users\Administrator\Desktop\LSRS\LSRS\FTP\FTPHelper.cs:line 475
+   at LSRS.FrmLSRS.InitInfo() in C:\Users\Administrator\Desktop\LSRS\LSRS\FrmLSRS.cs:line 765
+   at LSRS.FrmLSRS.FrmLSRS_Load(Object sender, EventArgs e) in C:\Users\Administrator\Desktop\LSRS\LSRS\FrmLSRS.cs:line 127 
+ ====================================================================================================  
+2019-09-02 22:12:17,425 [9] ERROR [ZtTools.Tools(600)] :
+ The operation has timed out 
+ ====================================================================================================  

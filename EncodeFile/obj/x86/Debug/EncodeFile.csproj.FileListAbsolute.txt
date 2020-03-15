@@ -1,0 +1,10 @@
+C:\Users\Administrator\Desktop\LSRS\EncodeFile\bin\Debug\EncodeFile.exe
+C:\Users\Administrator\Desktop\LSRS\EncodeFile\bin\Debug\EncodeFile.pdb
+C:\Users\Administrator\Desktop\LSRS\EncodeFile\obj\x86\Debug\EncodeFile.Form1.resources
+C:\Users\Administrator\Desktop\LSRS\EncodeFile\obj\x86\Debug\EncodeFile.Properties.Resources.resources
+C:\Users\Administrator\Desktop\LSRS\EncodeFile\obj\x86\Debug\EncodeFile.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\LSRS\EncodeFile\obj\x86\Debug\EncodeFile.exe
+C:\Users\Administrator\Desktop\LSRS\EncodeFile\obj\x86\Debug\EncodeFile.pdb
+C:\Users\Administrator\Desktop\LSRS\EncodeFile\bin\Debug\ESucess.dll
+C:\Users\Administrator\Desktop\LSRS\EncodeFile\obj\x86\Debug\EncodeFile.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\LSRS\EncodeFile\obj\x86\Debug\EncodeFile.WaitForm1.resources

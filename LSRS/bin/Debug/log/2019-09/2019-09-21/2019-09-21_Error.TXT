@@ -1,0 +1,60 @@
+2019-09-21 09:48:15,667 [10] ERROR [ZtTools.Tools(600)] :
+ System.IO.IOException: The process cannot access the file 'C:\Users\Administrator\Desktop\LSRS\LSRS\bin\Debug\Temp\temp.pdf' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalDelete(String path, Boolean checkHost)
+   at System.IO.File.Delete(String path)
+   at LSRS.FrmLSRS.treeList1_FocusedNodeChanged(Object sender, FocusedNodeChangedEventArgs e) in C:\Users\Administrator\Desktop\LSRS\LSRS\FrmLSRS.cs:line 1435 
+ ====================================================================================================  
+2019-09-21 09:48:39,778 [10] ERROR [ZtTools.Tools(600)] :
+ System.IO.IOException: The process cannot access the file 'C:\Users\Administrator\Desktop\LSRS\LSRS\bin\Debug\Temp\temp.pdf' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalDelete(String path, Boolean checkHost)
+   at System.IO.File.Delete(String path)
+   at LSRS.FrmLSRS.treeList1_FocusedNodeChanged(Object sender, FocusedNodeChangedEventArgs e) in C:\Users\Administrator\Desktop\LSRS\LSRS\FrmLSRS.cs:line 1435 
+ ====================================================================================================  
+2019-09-21 09:51:29,351 [9] ERROR [ZtTools.Tools(600)] :
+ System.NullReferenceException: Object reference not set to an instance of an object.
+   at DevExpress.DocumentView.ViewManager.GetInnerMarginWidth(Single zoom)
+   at DevExpress.DocumentView.ViewManager.GetPagePlaceSize(SizeF size, Single zoom)
+   at DevExpress.DocumentView.ViewManager.GetPagePlaceSize(Single zoom)
+   at DevExpress.DocumentView.ViewManager.GetViewColumns(Single zoom)
+   at DevExpress.DocumentView.Controls.DocumentViewerBase.UpdateViewRowsAndColumns(Single zoomValue)
+   at DevExpress.DocumentView.Controls.DocumentViewerBase.set_Zoom(Single value)
+   at DevExpress.XtraPdfViewer.Native.PdfDocumentViewer.UpdateZoomMode(PdfZoomMode zoomMode)
+   at DevExpress.XtraPdfViewer.PdfViewer.CreatePageViews(PdfDocument document, PdfDocumentState documentState)
+   at DevExpress.XtraPdfViewer.PdfViewer.SetDocument(PdfDocument newDocument, String newDocumentFilePath, Stream stream, Boolean resetRotateAndZoom)
+   at DevExpress.XtraPdfViewer.PdfViewer.LoadDocument(Stream stream, String path, Boolean resetRotateAndZoom)
+   at DevExpress.XtraPdfViewer.PdfViewer.LoadDocument(String path, Boolean resetRotateAndZoom)
+   at DevExpress.XtraPdfViewer.PdfViewer.LoadDocument(String path)
+   at LSRS.FrmLSRS.treeList1_FocusedNodeChanged(Object sender, FocusedNodeChangedEventArgs e) in C:\Users\Administrator\Desktop\LSRS\LSRS\FrmLSRS.cs:line 1450 
+ ====================================================================================================  
+2019-09-21 10:04:26,170 [9] ERROR [ZtTools.Tools(600)] :
+ System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.Collections.ArrayList.get_Item(Int32 index)
+   at DevExpress.XtraTreeList.Nodes.TreeListNodes.get_Item(Int32 index)
+   at LSRS.FrmLSRS.FrmLSRS_Load(Object sender, EventArgs e) in C:\Users\Administrator\Desktop\LSRS\LSRS\FrmLSRS.cs:line 125 
+ ====================================================================================================  
+2019-09-21 10:09:27,607 [9] ERROR [ZtTools.Tools(600)] :
+ System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.Collections.ArrayList.get_Item(Int32 index)
+   at DevExpress.XtraTreeList.Nodes.TreeListNodes.get_Item(Int32 index)
+   at LSRS.FrmLSRS.FrmLSRS_Load(Object sender, EventArgs e) in C:\Users\Administrator\Desktop\LSRS\LSRS\FrmLSRS.cs:line 125 
+ ====================================================================================================  
+2019-09-21 10:14:16,646 [10] ERROR [ZtTools.Tools(600)] :
+ The operation has timed out 
+ ====================================================================================================  
+2019-09-21 10:21:25,507 [9] ERROR [ZtTools.Tools(600)] :
+ System.Net.WebException: The operation has timed out
+   at System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   at System.Net.FtpWebRequest.RequestCallback(Object obj)
+   at System.Net.CommandStream.Dispose(Boolean disposing)
+   at System.IO.Stream.Close()
+   at System.IO.Stream.Dispose()
+   at System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   at System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   at System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   at System.Net.FtpWebRequest.GetResponse()
+   at LSRS.FTP.FtpWeb.GetAllList(String url, String userid, String password, String& errMsg) in C:\Users\Administrator\Desktop\LSRS\LSRS\FTP\FTPWeb.cs:line 52 
+ ====================================================================================================  

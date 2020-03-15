@@ -1,0 +1,7 @@
+2019-09-05 22:01:36,086 [9] ERROR [ZtTools.Tools(600)] :
+ System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at LSRS.FrmLSRS.CheckUpdate(IniClass& ini) in C:\Users\Administrator\Desktop\LSRS\LSRS\FrmLSRS.cs:line 1204 
+ ====================================================================================================  

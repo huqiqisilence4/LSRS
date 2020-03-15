@@ -1,0 +1,235 @@
+2019-08-25 16:35:54,280 [10] ERROR [ZtTools.Tools(600)] :
+ System.ArgumentException: 路径的形式不合法。
+   在 System.IO.Path.NormalizePath(String path, Boolean fullCheck, Int32 maxPathLength)
+   在 System.IO.Path.GetFullPathInternal(String path)
+   在 System.IO.DirectoryInfo..ctor(String path)
+   在 LSRS.FrmLSRS.treeList1_VirtualTreeGetCellValue(Object sender, VirtualTreeGetCellValueInfo e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 169
+   在 DevExpress.XtraTreeList.TreeList.TreeListVirtualDataHelper.GetCellDataViaEvent(Object node, TreeListColumn column, Boolean isCheckState)
+   在 DevExpress.XtraTreeList.Data.TreeListVirtualData.GetCellsData(Object node, IVirtualTreeListData parent)
+   在 DevExpress.XtraTreeList.Data.TreeListVirtualData.CreateChildren(VirtualDataRow parentRow, Boolean recursive)
+   在 DevExpress.XtraTreeList.Data.TreeListVirtualData.CreateRootNodes()
+   在 DevExpress.XtraTreeList.Data.TreeListVirtualData.CreateNodes(TreeListNode parent)
+   在 DevExpress.XtraTreeList.TreeList.LoadNodes()
+   在 DevExpress.XtraTreeList.TreeList.DoDataSourceChanged()
+   在 DevExpress.XtraTreeList.TreeList.UpdateDataSource(Boolean updateContent)
+   在 DevExpress.XtraTreeList.TreeList.UpdateDataSourceOnChangeDataSource()
+   在 DevExpress.XtraTreeList.TreeList.set_DataSource(Object value)
+   在 LSRS.FrmLSRS.FrmLSRS_Load(Object sender, EventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 43 
+ ====================================================================================================  
+2019-08-25 16:55:43,982 [9] ERROR [ZtTools.Tools(600)] :
+ System.ArgumentOutOfRangeException: startIndex 不能大于字符串长度。
+参数名: startIndex
+   在 System.String.InternalSubStringWithChecks(Int32 startIndex, Int32 length, Boolean fAlwaysCopy)
+   在 System.String.Substring(Int32 startIndex, Int32 length)
+   在 LSRS.FrmLSRS.treeList1_VirtualTreeGetCellValue(Object sender, VirtualTreeGetCellValueInfo e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 187 
+ ====================================================================================================  
+2019-08-25 16:55:45,182 [9] ERROR [ZtTools.Tools(600)] :
+ System.ArgumentOutOfRangeException: startIndex 不能大于字符串长度。
+参数名: startIndex
+   在 System.String.InternalSubStringWithChecks(Int32 startIndex, Int32 length, Boolean fAlwaysCopy)
+   在 System.String.Substring(Int32 startIndex, Int32 length)
+   在 LSRS.FrmLSRS.treeList1_VirtualTreeGetCellValue(Object sender, VirtualTreeGetCellValueInfo e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 187 
+ ====================================================================================================  
+2019-08-25 16:55:54,106 [9] ERROR [ZtTools.Tools(600)] :
+ System.ArgumentOutOfRangeException: startIndex 不能大于字符串长度。
+参数名: startIndex
+   在 System.String.InternalSubStringWithChecks(Int32 startIndex, Int32 length, Boolean fAlwaysCopy)
+   在 System.String.Substring(Int32 startIndex, Int32 length)
+   在 LSRS.FrmLSRS.treeList1_VirtualTreeGetCellValue(Object sender, VirtualTreeGetCellValueInfo e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 187 
+ ====================================================================================================  
+2019-08-25 16:55:55,027 [9] ERROR [ZtTools.Tools(600)] :
+ System.ArgumentOutOfRangeException: startIndex 不能大于字符串长度。
+参数名: startIndex
+   在 System.String.InternalSubStringWithChecks(Int32 startIndex, Int32 length, Boolean fAlwaysCopy)
+   在 System.String.Substring(Int32 startIndex, Int32 length)
+   在 LSRS.FrmLSRS.treeList1_VirtualTreeGetCellValue(Object sender, VirtualTreeGetCellValueInfo e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 187 
+ ====================================================================================================  
+2019-08-25 16:56:43,696 [10] ERROR [ZtTools.Tools(600)] :
+ System.ArgumentException: 路径中具有非法字符。
+   在 System.IO.Path.CheckInvalidPathChars(String path)
+   在 System.IO.Path.NormalizePath(String path, Boolean fullCheck, Int32 maxPathLength)
+   在 System.IO.Path.GetFullPathInternal(String path)
+   在 System.IO.DirectoryInfo..ctor(String path)
+   在 LSRS.FrmLSRS.treeList1_VirtualTreeGetCellValue(Object sender, VirtualTreeGetCellValueInfo e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 180 
+ ====================================================================================================  
+2019-08-25 16:56:45,181 [10] ERROR [ZtTools.Tools(600)] :
+ System.ArgumentException: 路径中具有非法字符。
+   在 System.IO.Path.CheckInvalidPathChars(String path)
+   在 System.IO.Path.NormalizePath(String path, Boolean fullCheck, Int32 maxPathLength)
+   在 System.IO.Path.GetFullPathInternal(String path)
+   在 System.IO.DirectoryInfo..ctor(String path)
+   在 LSRS.FrmLSRS.treeList1_VirtualTreeGetCellValue(Object sender, VirtualTreeGetCellValueInfo e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 180 
+ ====================================================================================================  
+2019-08-25 16:56:45,812 [10] ERROR [ZtTools.Tools(600)] :
+ System.ArgumentException: 路径中具有非法字符。
+   在 System.IO.Path.CheckInvalidPathChars(String path)
+   在 System.IO.Path.NormalizePath(String path, Boolean fullCheck, Int32 maxPathLength)
+   在 System.IO.Path.GetFullPathInternal(String path)
+   在 System.IO.DirectoryInfo..ctor(String path)
+   在 LSRS.FrmLSRS.treeList1_VirtualTreeGetCellValue(Object sender, VirtualTreeGetCellValueInfo e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 180 
+ ====================================================================================================  
+2019-08-25 18:48:01,112 [14] ERROR [ZtTools.Tools(600)] :
+ System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 LSRS.FrmLSRS.DownFileInfo() 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 118 
+ ====================================================================================================  
+2019-08-25 18:49:00,854 [15] ERROR [ZtTools.Tools(600)] :
+ System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 LSRS.FrmLSRS.DownFileInfo() 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 118 
+ ====================================================================================================  
+2019-08-25 19:11:13,578 [9] ERROR [ZtTools.Tools(600)] :
+ System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 LSRS.FrmLSRS.GetDir(String ftpPath, String ftpUserID, String ftpPassword, TreeNode preNode) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 177
+   在 LSRS.FrmLSRS.GetDir(String ftpPath, String ftpUserID, String ftpPassword, TreeNode preNode) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 168
+   在 LSRS.FrmLSRS.DownFileInfo() 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 127 
+ ====================================================================================================  
+2019-08-25 19:12:31,403 [10] ERROR [ZtTools.Tools(600)] :
+ System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 LSRS.FrmLSRS.GetDir(String ftpPath, String ftpUserID, String ftpPassword, TreeNode preNode) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 177
+   在 LSRS.FrmLSRS.GetDir(String ftpPath, String ftpUserID, String ftpPassword, TreeNode preNode) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 168
+   在 LSRS.FrmLSRS.DownFileInfo() 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 127 
+ ====================================================================================================  
+2019-08-25 19:46:59,653 [9] ERROR [ZtTools.Tools(600)] :
+ System.Exception: 远程服务器返回错误: (550) 文件不可用(例如，未找到文件，无法访问文件)。
+   在 DotNet.Utilities.FTPHelper.Download(String filePath, String fileName) 位置 E:\LSRS\LSRS\LSRS\FTP\FTPHelper.cs:行号 103
+   在 LSRS.FrmLSRS.treeView1_NodeMouseDoubleClick(Object sender, TreeNodeMouseClickEventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 352 
+ ====================================================================================================  
+2019-08-25 19:47:23,037 [9] ERROR [ZtTools.Tools(600)] :
+ System.Exception: 远程服务器返回错误: (550) 文件不可用(例如，未找到文件，无法访问文件)。
+   在 DotNet.Utilities.FTPHelper.Download(String filePath, String fileName) 位置 E:\LSRS\LSRS\LSRS\FTP\FTPHelper.cs:行号 103
+   在 LSRS.FrmLSRS.treeView1_NodeMouseDoubleClick(Object sender, TreeNodeMouseClickEventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 352 
+ ====================================================================================================  
+2019-08-25 19:47:28,319 [9] ERROR [ZtTools.Tools(600)] :
+ System.Exception: 远程服务器返回错误: (550) 文件不可用(例如，未找到文件，无法访问文件)。
+   在 DotNet.Utilities.FTPHelper.Download(String filePath, String fileName) 位置 E:\LSRS\LSRS\LSRS\FTP\FTPHelper.cs:行号 103
+   在 LSRS.FrmLSRS.treeView1_NodeMouseDoubleClick(Object sender, TreeNodeMouseClickEventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 352 
+ ====================================================================================================  
+2019-08-25 19:47:31,712 [9] ERROR [ZtTools.Tools(600)] :
+ System.Exception: 远程服务器返回错误: (550) 文件不可用(例如，未找到文件，无法访问文件)。
+   在 DotNet.Utilities.FTPHelper.Download(String filePath, String fileName) 位置 E:\LSRS\LSRS\LSRS\FTP\FTPHelper.cs:行号 103
+   在 LSRS.FrmLSRS.treeView1_NodeMouseDoubleClick(Object sender, TreeNodeMouseClickEventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 352 
+ ====================================================================================================  
+2019-08-25 19:49:10,567 [9] ERROR [ZtTools.Tools(600)] :
+ System.Exception: 远程服务器返回错误: (550) 文件不可用(例如，未找到文件，无法访问文件)。
+   在 DotNet.Utilities.FTPHelper.Download(String filePath, String fileName) 位置 E:\LSRS\LSRS\LSRS\FTP\FTPHelper.cs:行号 103
+   在 LSRS.FrmLSRS.treeView1_NodeMouseDoubleClick(Object sender, TreeNodeMouseClickEventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 352 
+ ====================================================================================================  
+2019-08-25 19:49:13,352 [9] ERROR [ZtTools.Tools(600)] :
+ System.Exception: 文件“E:\LSRS\LSRS\LSRS\bin\Debug\目录树\A\胡琦琦2019周报.xlsx”正由另一进程使用，因此该进程无法访问此文件。
+   在 DotNet.Utilities.FTPHelper.Download(String filePath, String fileName) 位置 E:\LSRS\LSRS\LSRS\FTP\FTPHelper.cs:行号 103
+   在 LSRS.FrmLSRS.treeView1_NodeMouseDoubleClick(Object sender, TreeNodeMouseClickEventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 352 
+ ====================================================================================================  
+2019-08-25 19:49:19,513 [9] ERROR [ZtTools.Tools(600)] :
+ System.Exception: 文件“E:\LSRS\LSRS\LSRS\bin\Debug\目录树\A\胡琦琦2019周报.xlsx”正由另一进程使用，因此该进程无法访问此文件。
+   在 DotNet.Utilities.FTPHelper.Download(String filePath, String fileName) 位置 E:\LSRS\LSRS\LSRS\FTP\FTPHelper.cs:行号 103
+   在 LSRS.FrmLSRS.treeView1_NodeMouseDoubleClick(Object sender, TreeNodeMouseClickEventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 352 
+ ====================================================================================================  
+2019-08-25 19:51:21,497 [9] ERROR [ZtTools.Tools(600)] :
+ System.Exception: 远程服务器返回错误: (550) 文件不可用(例如，未找到文件，无法访问文件)。
+   在 DotNet.Utilities.FTPHelper.Download(String filePath, String fileName) 位置 E:\LSRS\LSRS\LSRS\FTP\FTPHelper.cs:行号 103
+   在 LSRS.FrmLSRS.treeView1_NodeMouseDoubleClick(Object sender, TreeNodeMouseClickEventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 352 
+ ====================================================================================================  
+2019-08-25 19:52:51,761 [9] ERROR [ZtTools.Tools(600)] :
+ System.Exception: 远程服务器返回错误: (550) 文件不可用(例如，未找到文件，无法访问文件)。
+   在 DotNet.Utilities.FTPHelper.Download(String filePath, String fileName) 位置 E:\LSRS\LSRS\LSRS\FTP\FTPHelper.cs:行号 103
+   在 LSRS.FrmLSRS.treeView1_NodeMouseDoubleClick(Object sender, TreeNodeMouseClickEventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 352 
+ ====================================================================================================  
+2019-08-25 19:53:03,543 [9] ERROR [ZtTools.Tools(600)] :
+ System.Exception: 文件“E:\LSRS\LSRS\LSRS\bin\Debug\目录树\A\胡琦琦2019周报.xlsx”正由另一进程使用，因此该进程无法访问此文件。
+   在 DotNet.Utilities.FTPHelper.Download(String filePath, String fileName) 位置 E:\LSRS\LSRS\LSRS\FTP\FTPHelper.cs:行号 103
+   在 LSRS.FrmLSRS.treeView1_NodeMouseDoubleClick(Object sender, TreeNodeMouseClickEventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 352 
+ ====================================================================================================  
+2019-08-25 19:54:04,130 [10] ERROR [ZtTools.Tools(600)] :
+ System.Exception: 远程服务器返回错误: (550) 文件不可用(例如，未找到文件，无法访问文件)。
+   在 DotNet.Utilities.FTPHelper.Download(String filePath, String fileName) 位置 E:\LSRS\LSRS\LSRS\FTP\FTPHelper.cs:行号 103
+   在 LSRS.FrmLSRS.treeView1_NodeMouseDoubleClick(Object sender, TreeNodeMouseClickEventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 352 
+ ====================================================================================================  
+2019-08-25 19:54:06,128 [10] ERROR [ZtTools.Tools(600)] :
+ System.Exception: 远程服务器返回错误: (550) 文件不可用(例如，未找到文件，无法访问文件)。
+   在 DotNet.Utilities.FTPHelper.Download(String filePath, String fileName) 位置 E:\LSRS\LSRS\LSRS\FTP\FTPHelper.cs:行号 103
+   在 LSRS.FrmLSRS.treeView1_NodeMouseDoubleClick(Object sender, TreeNodeMouseClickEventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 352 
+ ====================================================================================================  
+2019-08-25 19:54:25,410 [10] ERROR [ZtTools.Tools(600)] :
+ System.Exception: 远程服务器返回错误: (550) 文件不可用(例如，未找到文件，无法访问文件)。
+   在 DotNet.Utilities.FTPHelper.Download(String filePath, String fileName) 位置 E:\LSRS\LSRS\LSRS\FTP\FTPHelper.cs:行号 103
+   在 LSRS.FrmLSRS.treeView1_NodeMouseDoubleClick(Object sender, TreeNodeMouseClickEventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 352 
+ ====================================================================================================  
+2019-08-25 19:54:27,060 [10] ERROR [ZtTools.Tools(600)] :
+ System.Exception: 远程服务器返回错误: (550) 文件不可用(例如，未找到文件，无法访问文件)。
+   在 DotNet.Utilities.FTPHelper.Download(String filePath, String fileName) 位置 E:\LSRS\LSRS\LSRS\FTP\FTPHelper.cs:行号 103
+   在 LSRS.FrmLSRS.treeView1_NodeMouseDoubleClick(Object sender, TreeNodeMouseClickEventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 352 
+ ====================================================================================================  
+2019-08-25 19:55:54,529 [8] ERROR [ZtTools.Tools(600)] :
+ System.Exception: 远程服务器返回错误: (550) 文件不可用(例如，未找到文件，无法访问文件)。
+   在 DotNet.Utilities.FTPHelper.Download(String filePath, String fileName) 位置 E:\LSRS\LSRS\LSRS\FTP\FTPHelper.cs:行号 103
+   在 LSRS.FrmLSRS.treeView1_NodeMouseDoubleClick(Object sender, TreeNodeMouseClickEventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 352 
+ ====================================================================================================  
+2019-08-25 19:55:56,952 [8] ERROR [ZtTools.Tools(600)] :
+ System.Exception: 远程服务器返回错误: (550) 文件不可用(例如，未找到文件，无法访问文件)。
+   在 DotNet.Utilities.FTPHelper.Download(String filePath, String fileName) 位置 E:\LSRS\LSRS\LSRS\FTP\FTPHelper.cs:行号 103
+   在 LSRS.FrmLSRS.treeView1_NodeMouseDoubleClick(Object sender, TreeNodeMouseClickEventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 352 
+ ====================================================================================================  
+2019-08-25 19:55:59,533 [8] ERROR [ZtTools.Tools(600)] :
+ System.Exception: 远程服务器返回错误: (550) 文件不可用(例如，未找到文件，无法访问文件)。
+   在 DotNet.Utilities.FTPHelper.Download(String filePath, String fileName) 位置 E:\LSRS\LSRS\LSRS\FTP\FTPHelper.cs:行号 103
+   在 LSRS.FrmLSRS.treeView1_NodeMouseDoubleClick(Object sender, TreeNodeMouseClickEventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 352 
+ ====================================================================================================  
+2019-08-25 19:56:01,691 [8] ERROR [ZtTools.Tools(600)] :
+ System.Exception: 文件“E:\LSRS\LSRS\LSRS\bin\Debug\目录树\B\自动化测试系统功能需求.docx”正由另一进程使用，因此该进程无法访问此文件。
+   在 DotNet.Utilities.FTPHelper.Download(String filePath, String fileName) 位置 E:\LSRS\LSRS\LSRS\FTP\FTPHelper.cs:行号 103
+   在 LSRS.FrmLSRS.treeView1_NodeMouseDoubleClick(Object sender, TreeNodeMouseClickEventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 352 
+ ====================================================================================================  
+2019-08-25 19:56:04,450 [8] ERROR [ZtTools.Tools(600)] :
+ System.Exception: 远程服务器返回错误: (550) 文件不可用(例如，未找到文件，无法访问文件)。
+   在 DotNet.Utilities.FTPHelper.Download(String filePath, String fileName) 位置 E:\LSRS\LSRS\LSRS\FTP\FTPHelper.cs:行号 103
+   在 LSRS.FrmLSRS.treeView1_NodeMouseDoubleClick(Object sender, TreeNodeMouseClickEventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 352 
+ ====================================================================================================  
+2019-08-25 19:56:06,653 [8] ERROR [ZtTools.Tools(600)] :
+ System.Exception: 远程服务器返回错误: (550) 文件不可用(例如，未找到文件，无法访问文件)。
+   在 DotNet.Utilities.FTPHelper.Download(String filePath, String fileName) 位置 E:\LSRS\LSRS\LSRS\FTP\FTPHelper.cs:行号 103
+   在 LSRS.FrmLSRS.treeView1_NodeMouseDoubleClick(Object sender, TreeNodeMouseClickEventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 352 
+ ====================================================================================================  
+2019-08-25 19:56:10,421 [8] ERROR [ZtTools.Tools(600)] :
+ System.Exception: 远程服务器返回错误: (550) 文件不可用(例如，未找到文件，无法访问文件)。
+   在 DotNet.Utilities.FTPHelper.Download(String filePath, String fileName) 位置 E:\LSRS\LSRS\LSRS\FTP\FTPHelper.cs:行号 103
+   在 LSRS.FrmLSRS.treeView1_NodeMouseDoubleClick(Object sender, TreeNodeMouseClickEventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 352 
+ ====================================================================================================  
+2019-08-25 20:11:32,095 [9] ERROR [ZtTools.Tools(600)] :
+ System.Exception: 远程服务器返回错误: (550) 文件不可用(例如，未找到文件，无法访问文件)。
+   在 DotNet.Utilities.FTPHelper.Download(String filePath, String fileName) 位置 E:\LSRS\LSRS\LSRS\FTP\FTPHelper.cs:行号 103
+   在 LSRS.FrmLSRS.treeView1_NodeMouseDoubleClick(Object sender, TreeNodeMouseClickEventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 208 
+ ====================================================================================================  
+2019-08-25 20:11:34,085 [9] ERROR [ZtTools.Tools(600)] :
+ System.Exception: 文件“E:\LSRS\LSRS\LSRS\bin\Debug\目录树\root1.txt”正由另一进程使用，因此该进程无法访问此文件。
+   在 DotNet.Utilities.FTPHelper.Download(String filePath, String fileName) 位置 E:\LSRS\LSRS\LSRS\FTP\FTPHelper.cs:行号 103
+   在 LSRS.FrmLSRS.treeView1_NodeMouseDoubleClick(Object sender, TreeNodeMouseClickEventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 208 
+ ====================================================================================================  
+2019-08-25 20:11:36,109 [9] ERROR [ZtTools.Tools(600)] :
+ System.Exception: 远程服务器返回错误: (550) 文件不可用(例如，未找到文件，无法访问文件)。
+   在 DotNet.Utilities.FTPHelper.Download(String filePath, String fileName) 位置 E:\LSRS\LSRS\LSRS\FTP\FTPHelper.cs:行号 103
+   在 LSRS.FrmLSRS.treeView1_NodeMouseDoubleClick(Object sender, TreeNodeMouseClickEventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 208 
+ ====================================================================================================  
+2019-08-25 20:12:10,088 [9] ERROR [ZtTools.Tools(600)] :
+ System.Exception: 远程服务器返回错误: (550) 文件不可用(例如，未找到文件，无法访问文件)。
+   在 DotNet.Utilities.FTPHelper.Download(String filePath, String fileName) 位置 E:\LSRS\LSRS\LSRS\FTP\FTPHelper.cs:行号 103
+   在 LSRS.FrmLSRS.treeView1_NodeMouseDoubleClick(Object sender, TreeNodeMouseClickEventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 208 
+ ====================================================================================================  
+2019-08-25 20:12:12,800 [9] ERROR [ZtTools.Tools(600)] :
+ System.Exception: 文件“E:\LSRS\LSRS\LSRS\bin\Debug\目录树\B\自动化测试系统功能需求.docx”正由另一进程使用，因此该进程无法访问此文件。
+   在 DotNet.Utilities.FTPHelper.Download(String filePath, String fileName) 位置 E:\LSRS\LSRS\LSRS\FTP\FTPHelper.cs:行号 103
+   在 LSRS.FrmLSRS.treeView1_NodeMouseDoubleClick(Object sender, TreeNodeMouseClickEventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 208 
+ ====================================================================================================  
+2019-08-25 20:19:06,177 [1] ERROR [ZtTools.Tools(600)] :
+ System.Exception: 远程服务器返回错误: (550) 文件不可用(例如，未找到文件，无法访问文件)。
+   在 DotNet.Utilities.FTPHelper.Download(String filePath, String fileName) 位置 E:\LSRS\LSRS\LSRS\FTP\FTPHelper.cs:行号 103
+   在 LSRS.FrmLSRS.treeView1_NodeMouseDoubleClick(Object sender, TreeNodeMouseClickEventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 208 
+ ====================================================================================================  
+2019-08-25 20:19:14,681 [1] ERROR [ZtTools.Tools(600)] :
+ System.Exception: 远程服务器返回错误: (550) 文件不可用(例如，未找到文件，无法访问文件)。
+   在 DotNet.Utilities.FTPHelper.Download(String filePath, String fileName) 位置 E:\LSRS\LSRS\LSRS\FTP\FTPHelper.cs:行号 103
+   在 LSRS.FrmLSRS.treeView1_NodeMouseDoubleClick(Object sender, TreeNodeMouseClickEventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 208 
+ ====================================================================================================  
+2019-08-25 20:19:19,279 [1] ERROR [ZtTools.Tools(600)] :
+ System.Exception: 远程服务器返回错误: (550) 文件不可用(例如，未找到文件，无法访问文件)。
+   在 DotNet.Utilities.FTPHelper.Download(String filePath, String fileName) 位置 E:\LSRS\LSRS\LSRS\FTP\FTPHelper.cs:行号 103
+   在 LSRS.FrmLSRS.treeView1_NodeMouseDoubleClick(Object sender, TreeNodeMouseClickEventArgs e) 位置 E:\LSRS\LSRS\LSRS\FrmLSRS.cs:行号 208 
+ ====================================================================================================  

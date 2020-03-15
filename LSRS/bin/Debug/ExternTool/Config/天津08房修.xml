@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<土方系数>
+	<EarthworkFactor code="EarthworkFactor" description="土方系数">
+		<fieldnames EarthworkFactorID="1" Factor1="1" Factor2="1.3" Factor3="0.87" Factor4="1.08"/>
+		<fieldnames EarthworkFactorID="2" Factor1="0.77" Factor2="1" Factor3="0.67" Factor4="0.83"/>
+		<fieldnames EarthworkFactorID="3" Factor1="1.15" Factor2="1.49" Factor3="1" Factor4="1.24"/>
+		<fieldnames EarthworkFactorID="4" Factor1="0.93" Factor2="1.2" Factor3="0.81" Factor4="1"/>
+	</EarthworkFactor>
+</土方系数>

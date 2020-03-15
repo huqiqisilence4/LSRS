@@ -1,0 +1,9 @@
+C:\Users\Administrator\Desktop\LSRS\AlertForm\obj\x86\Debug\LSRS.Form1.resources
+C:\Users\Administrator\Desktop\LSRS\AlertForm\obj\x86\Debug\LSRS.FrmAlert.resources
+C:\Users\Administrator\Desktop\LSRS\AlertForm\obj\x86\Debug\AlertForm.Properties.Resources.resources
+C:\Users\Administrator\Desktop\LSRS\AlertForm\obj\x86\Debug\AlertForm.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\LSRS\AlertForm\bin\Debug\AlertForm.exe
+C:\Users\Administrator\Desktop\LSRS\AlertForm\bin\Debug\AlertForm.pdb
+C:\Users\Administrator\Desktop\LSRS\AlertForm\obj\x86\Debug\AlertForm.exe
+C:\Users\Administrator\Desktop\LSRS\AlertForm\obj\x86\Debug\AlertForm.pdb
+C:\Users\Administrator\Desktop\LSRS\AlertForm\obj\x86\Debug\AlertForm.csprojResolveAssemblyReference.cache
