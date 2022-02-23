@@ -8,3 +8,12 @@ C:\Users\Administrator\Desktop\LSRS\EncodeFile\obj\x86\Debug\EncodeFile.pdb
 C:\Users\Administrator\Desktop\LSRS\EncodeFile\bin\Debug\ESucess.dll
 C:\Users\Administrator\Desktop\LSRS\EncodeFile\obj\x86\Debug\EncodeFile.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Desktop\LSRS\EncodeFile\obj\x86\Debug\EncodeFile.WaitForm1.resources
+E:\项目\LSRS\EncodeFile\obj\x86\Debug\EncodeFile.csproj.AssemblyReference.cache
+E:\项目\LSRS\EncodeFile\obj\x86\Debug\EncodeFile.csproj.SuggestedBindingRedirects.cache
+E:\项目\LSRS\EncodeFile\obj\x86\Debug\EncodeFile.Form1.resources
+E:\项目\LSRS\EncodeFile\obj\x86\Debug\EncodeFile.Properties.Resources.resources
+E:\项目\LSRS\EncodeFile\obj\x86\Debug\EncodeFile.WaitForm1.resources
+E:\项目\LSRS\EncodeFile\obj\x86\Debug\EncodeFile.csproj.GenerateResource.cache
+E:\项目\LSRS\EncodeFile\obj\x86\Debug\EncodeFile.csproj.CoreCompileInputs.cache
+E:\项目\LSRS\EncodeFile\obj\x86\Debug\EncodeFile.exe
+E:\项目\LSRS\EncodeFile\obj\x86\Debug\EncodeFile.pdb

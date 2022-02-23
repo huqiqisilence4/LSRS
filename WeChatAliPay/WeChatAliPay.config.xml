@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <configSections>
+    <section name="WeChatAliPay" type="System.Configuration.AppSettingsSection"/>
+  </configSections>
+  <WeChatAliPay>
+    <add key="WeChatMicroPayUrl" value="https://api.mch.weixin.qq.com/pay/micropay "/>
+    <add key="WeChatOrderQueryUrl" value="https://api.mch.weixin.qq.com/pay/orderquery "/>
+    <add key="WeChatCloseOrderUrl" value="https://api.mch.weixin.qq.com/pay/closeorder "/>
+    <add key="WeChatPayAPIKey" value="DFefef34rfdfgthh6GDFRGG444gfg485"/>
+    <add key="WeChatAppid" value="wxb766efd2ae312bc1"/>
+    <add key="WeChatMchid" value="1439401302"/>
+    <add key="WeChatDeviceInfo" value="603"/>
+    <add key="WeChatTimeOut" value="60"/>
+
+    <!--<add key="AliPayGateway" value="https://openapi.alipay.com/gateway.do"/>
+    <add key="AliPayAppPrivateKey" value="MIICXQIBAAKBgQD1rU/IVGae8vVe+uIeR0k+rFcVxvahwic0BrN9+9EicUyTOGJ0
+OiB8v1kRCGFFgLUURbkiLz7JNCrsDR5lZ0o1HI6pYjfEN/jqBAIrM9HVZBjdAKR6
+HfgQFiGwO3d1uf1qGSpPRNeZPYb0xC9pdhhsjU/nH5eV9g2/VQa+DZYVCQIDAQAB
+AoGBAMrF/W/PmdPfnH6EfFWZaO79t/MVgUMJyOm8DjIRwg+3jAiHJVvhDidol87j
+J8YB8XOGCMQaUqwnDrY+LbRsiGWn6RBb+35cu5HazIBjA2Bgva/L4sqp9mkUOO6E
+8pAYb60vkXXVehvVNDlxmDrATYyJIQMRgWVhjj3LPjhf2AXBAkEA/K5LMWhsqthL
+qFymk9eR5suVxAzgfOiRdkugG6uxCQ410stkenf2Bhut1HZ15+kQtVpv4u7u7CEn
+FAXvnPeKlQJBAPjndzZM76iRW48qMDcVacRNGvggYaDnbD/FsaHTbiniP3dtON2l
+M6RiSpmxgo4z12REFYYNDB1jAmkKoh0E96UCQDGaAVa8mgBbn1Z4gZaqDZERy9+F
+a5f5i3x+Ufq8lG8jo/syRBIqdFg0nMYFTxXsUYRYMXiJ0Mr3oxUyKRxWF5UCQEki
+8lOBTdZxR78MfXhiEV797RPFqAo4lgUzGNvdHXyvH0j/TftKxJ7jxtncX+la8Epk
++xIVmV61LgshdbsjL4UCQQDqJwWdvQZbE+pbw1SS0gJssrbfZbQTXDBmnuM+6l5t
+iYdO6SfnuEoNIBY0Bo/oM59jq72dtcgJIdXZi3IoFTKJ"/>
+    <add key="AliPayAppPublicKey" value="MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQD1rU/IVGae8vVe+uIeR0k+rFcV
+xvahwic0BrN9+9EicUyTOGJ0OiB8v1kRCGFFgLUURbkiLz7JNCrsDR5lZ0o1HI6p
+YjfEN/jqBAIrM9HVZBjdAKR6HfgQFiGwO3d1uf1qGSpPRNeZPYb0xC9pdhhsjU/n
+H5eV9g2/VQa+DZYVCQIDAQAB"/>
+    <add key="AliPayPublicKey" value="MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDDI6d306Q8fIfCOaTXyiUeJHkrIvYISRcc73s3vF1ZT7XN8RNPwJxo8pWaJMmvyTn9N4HQ632qJBVHf8sxHi/fEsraprwCtzvzQETrNRwVxLO5jVmRGi60j8Ue1efIlzPXV9je9mkjzOmdssymZkh2QhUrCmZYI/FCEa3/cNMW0QIDAQAB"/>
+    <add key="AliPayAppId" value="2016110802643074"/>
+    <aadd key="AliPaySellerId" value="2088421985355673"/>
+    <dd key="goods_id" value="广东"/>
+    <add key="Body" value="清远"/>
+    <add key="goods_name" value="清远连山"/>
+    <add key="store_id" value="清远连山"/>
+    <add key="terminal_id" value="603"/>
+    <add key="AliPayPid" value="2088421985355673"/>
+    <add key="sys_service_provider_id" value="2088421985355673"/>-->
+
+    <add key="AliPayGateway" value="https://openapi.alipaydev.com/gateway.do"/>
+    <add key="AliPayAppPrivateKey" value="MIIEowIBAAKCAQEAgLP3+3hbZR6s4VOQy/aQUgqPiPLbqEOmpk4YSzV+GORU146OaBlktlgqY2ZNiBY5Z6uSB+j48LibJbHrHJHQWcyVHzcu5uSkKifC/RlxuJDzxhu0vTnr/0bb9d1N1HVq91foJxQjbD+B7hp/vuzfQ2Ik6OOsej4nfM/C957/crTVUY0QhVs13CUTKAffuiGjMTbABfZ14qCLqWd50lZoFhSllEc0nQIkkBtwNP2eNv+M/uaxizSuunlXOCzPoD/ydpu9/zHaggS4BvfD5ldu4UP/jG//WTJPw+LopefzM6t/G/ro9i+IzJMeSZpa5PiU9NamBUE5xsc3ukJoR7EyRQIDAQABAoIBAERhWiwdslFzjt7ZC2GSyvML8V8NyW8JIo3RiE7NSQXoqrssXrUoaL4I8dyGCkN3q2BNY/UX7svXCXdppEU1o8FSVRiUtTKv4BkVrx/SWP165konhkvTbnPfLhbfUe7Dw+VOq2W36WomA96B7cV/DNA8YOfrr0Pzqf9CU5BExewnLPbl/24wCxgoopR3NepOLo0Vl7Mt7hWzVDjdpI3D4yym6bT5r6VYFRnv1shU6pxrkv+DJAT3ztp0JRQCFhmTXr++K2UrrFnZ+bHeaUs0AFDsvYQxyncOUHt/3/cwMPOn+KuUL2vhWAO9MKbq/5b2ALMwIbBTaMqyTeyfaBUrT7ECgYEA0rkSzpTpBQLvaPaW4r5yCqJNb0OvIR8UIwdk1J2Me9ed+mr9hH9VCV7/yIisXBItKzAydjHzIj0EcZqxfK0n7CwZA/cmznm7LSAdaGSFPmXGh3hNJo7294AyCO9RfAdBfcNj6sayJ98Y7FedU+z/4tCdTPl5T/xrGJhyVOoS7IcCgYEAnFtYXKuLy8y+EfecfsBPRvSTOznt65opFRySHlB1dH00qKmSWfxjTXcfWup9LEERM+DVUdhjyA4JHl9KBSMx9du49ktHDu6+YqwYHwgXGMW9D7sXtf5d/cLwOTW4FAn4VuX6osiknDT9WocuAM7RQv+avfFdNh6A/sLm8z9cidMCgYEAs3n0fcUxDxan6QOWEfvZUBtazricUh6RXSBwDfM+c0B7io1T7mUxfXDPdPKLs0O7+vvrDuaOSgwkW8pA/4rP5QTOLaV1BQmDlfSzd3WeUz4GMN4TABNmX/ltJFUJVxUq/73KvW2M0g7fwHUDSDck3v+F6sjVPX4ljWZSguZ3RcMCgYBr9+vJei/7mDM75vcq05Mq1SKCCFuRkI+D44nG4xpoSTk+qnHEL7NGv9ZoCnpLP9coMr47WSh18bM8ROKxL3+FXaeYc5zq49OWAW5ap1SDp7AJF9Gku7Sd0aneZ4joVYYmQ4LSO6jnsPOuOqB6sFXyZNyvAuexwlijE2U1XXCCPwKBgBYg1ftCKx314aJUrrS7tMQaZyDeR/u2DoiMaccKWFR3wqvr1wyc5kOKGT2ZFOM3LuzzwTiCJbYxZD1JyONO5GcgmMS1o7QKWHzXXnUrqifpn8bf3308g+YJIXPSGxJGGcGt1EYrSOpoYb+1HVysf/dSOjajR+kmptn4rH7AqHvl"/>
+    <add key="AliPayAppPublicKey" value="MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgLP3+3hbZR6s4VOQy/aQUgqPiPLbqEOmpk4YSzV+GORU146OaBlktlgqY2ZNiBY5Z6uSB+j48LibJbHrHJHQWcyVHzcu5uSkKifC/RlxuJDzxhu0vTnr/0bb9d1N1HVq91foJxQjbD+B7hp/vuzfQ2Ik6OOsej4nfM/C957/crTVUY0QhVs13CUTKAffuiGjMTbABfZ14qCLqWd50lZoFhSllEc0nQIkkBtwNP2eNv+M/uaxizSuunlXOCzPoD/ydpu9/zHaggS4BvfD5ldu4UP/jG//WTJPw+LopefzM6t/G/ro9i+IzJMeSZpa5PiU9NamBUE5xsc3ukJoR7EyRQIDAQAB"/>
+    <!--<add key="AliPayPublicKey" value="MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDIgHnOn7LLILlKETd6BFRJ0GqgS2Y3mn1wMQmyh9zEyWlz5p1zrahRahbXAfCfSqshSNfqOmAQzSHRVjCqjsAw1jyqrXaPdKBmr90DIpIxmIyKXv4GGAkPyJ/6FTFY99uhpiq0qadD/uSzQsefWo0aTvP/65zi3eof7TcZ32oWpwIDAQAB"/>-->
+	<add key="AliPayPublicKey" value="MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgdWDHQCLlzQtp2O38t71mytMBGEh6PVtkwJT8yb2cXp1nCh2BVcA2QQf+vK5GF4edM/0QNkrILcMdGVXU+rupvkjQZ1DnHtQ2/Ap2RDfwUdkjGNux+kbym+dDtnC4zbHN5MRfPNXI9mA7oUdCRo5TgQVEqhoDnKp0kCfQRaDHnDXH9a2lLg604GUeVxDCn5/wPwzXV0rsmGj9ATBZ2Z2jzQdKAJtHRkpn0PFkG0R+0NKwZJwkTVc0quoLqxIw+XJdXFhxTYYWTZl75+p6r+5+6vZaUb8Jqma9NusnRsXmNOsnrtO3lSErBU2QDKQ5myvOBNmXVaR4Hi7CIzuOmitQQIDAQAB"/>
+	  
+    <add key="AliPayAppId" value="2016080500176905"/>
+    <add key="AliPaySellerId" value="2088102170135624"/>
+    <add key="goods_id" value="陕西"/>
+    <add key="Body" value="陕西"/>
+    <add key="goods_name" value="陕西西安"/>
+    <add key="store_id" value="陕西西安"/>
+    <add key="terminal_id" value="603"/>
+    <add key="AliPayPid" value="2088102170135624"/>
+    <add key="sys_service_provider_id" value="2088102170135624"/>
+  </WeChatAliPay>
+  <appSettings>
+
+  </appSettings>
+  <startup>
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/>
+  </startup>
+</configuration>

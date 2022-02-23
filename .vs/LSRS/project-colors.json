@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "d3f8b453-2e0f-42e5-8f4f-3e1935aba276": {
+      "ProjectGuid": "d3f8b453-2e0f-42e5-8f4f-3e1935aba276",
+      "DisplayName": "LSRS",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "杂项文件",
+      "ColorIndex": -1
+    },
+    "4b1b9dc3-1605-4e5e-b6b4-af76b52ad1c4": {
+      "ProjectGuid": "4b1b9dc3-1605-4e5e-b6b4-af76b52ad1c4",
+      "DisplayName": "EncodeFile",
+      "ColorIndex": 1
+    },
+    "a54ebad2-6269-46ac-8258-eb0a6abfbe98": {
+      "ProjectGuid": "a54ebad2-6269-46ac-8258-eb0a6abfbe98",
+      "DisplayName": "AlertForm",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}

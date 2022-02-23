@@ -38,6 +38,7 @@
             this.treeListColumn2 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.treeListColumn3 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.treeListColumn4 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.treeListColumn5 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
             this.txtSearchText = new DevExpress.XtraEditors.TextEdit();
@@ -161,7 +162,8 @@
             this.treeListColumn1,
             this.treeListColumn2,
             this.treeListColumn3,
-            this.treeListColumn4});
+            this.treeListColumn4,
+            this.treeListColumn5});
             this.treeList1.Cursor = System.Windows.Forms.Cursors.Default;
             this.treeList1.ImageIndexFieldName = "imageList1";
             this.treeList1.Location = new System.Drawing.Point(3, 43);
@@ -209,6 +211,12 @@
             this.treeListColumn4.Caption = "treeListColumn4";
             this.treeListColumn4.FieldName = "ID";
             this.treeListColumn4.Name = "treeListColumn4";
+            // 
+            // treeListColumn5
+            // 
+            this.treeListColumn5.Caption = "treeListColumn5";
+            this.treeListColumn5.FieldName = "ServerFilePath";
+            this.treeListColumn5.Name = "treeListColumn5";
             // 
             // panelControl1
             // 
@@ -553,7 +561,7 @@
             this.tabPageWord.Controls.Add(this.richEditControl1);
             this.tabPageWord.Margin = new System.Windows.Forms.Padding(0);
             this.tabPageWord.Name = "tabPageWord";
-            this.tabPageWord.Size = new System.Drawing.Size(814, 533);
+            this.tabPageWord.Size = new System.Drawing.Size(814, 562);
             this.tabPageWord.Text = "Word";
             // 
             // richEditControl1
@@ -563,7 +571,8 @@
             this.richEditControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.richEditControl1.MenuManager = this.barManager1;
             this.richEditControl1.Name = "richEditControl1";
-            this.richEditControl1.Size = new System.Drawing.Size(814, 533);
+            this.richEditControl1.Options.Export.Rtf.ExportTheme = true;
+            this.richEditControl1.Size = new System.Drawing.Size(814, 562);
             this.richEditControl1.TabIndex = 0;
             this.richEditControl1.Text = "richEditControl1";
             // 
@@ -572,7 +581,7 @@
             this.tabPageExcel.Controls.Add(this.spreadsheetControl1);
             this.tabPageExcel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPageExcel.Name = "tabPageExcel";
-            this.tabPageExcel.Size = new System.Drawing.Size(814, 533);
+            this.tabPageExcel.Size = new System.Drawing.Size(814, 562);
             this.tabPageExcel.Text = "Excel";
             // 
             // spreadsheetControl1
@@ -582,7 +591,7 @@
             this.spreadsheetControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.spreadsheetControl1.MenuManager = this.barManager1;
             this.spreadsheetControl1.Name = "spreadsheetControl1";
-            this.spreadsheetControl1.Size = new System.Drawing.Size(814, 533);
+            this.spreadsheetControl1.Size = new System.Drawing.Size(814, 562);
             this.spreadsheetControl1.TabIndex = 1;
             this.spreadsheetControl1.Text = "spreadsheetControl1";
             // 
@@ -591,7 +600,7 @@
             this.tabPagePdf.Controls.Add(this.pdfViewer1);
             this.tabPagePdf.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPagePdf.Name = "tabPagePdf";
-            this.tabPagePdf.Size = new System.Drawing.Size(814, 533);
+            this.tabPagePdf.Size = new System.Drawing.Size(814, 562);
             this.tabPagePdf.Text = "Pdf";
             // 
             // pdfViewer1
@@ -600,7 +609,7 @@
             this.pdfViewer1.Location = new System.Drawing.Point(0, 0);
             this.pdfViewer1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pdfViewer1.Name = "pdfViewer1";
-            this.pdfViewer1.Size = new System.Drawing.Size(814, 533);
+            this.pdfViewer1.Size = new System.Drawing.Size(814, 562);
             this.pdfViewer1.TabIndex = 0;
             // 
             // tabPageWeb
@@ -608,7 +617,7 @@
             this.tabPageWeb.Controls.Add(this.webBrowser1);
             this.tabPageWeb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPageWeb.Name = "tabPageWeb";
-            this.tabPageWeb.Size = new System.Drawing.Size(814, 533);
+            this.tabPageWeb.Size = new System.Drawing.Size(814, 562);
             this.tabPageWeb.Text = "网址";
             // 
             // webBrowser1
@@ -618,14 +627,14 @@
             this.webBrowser1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(23, 26);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(814, 533);
+            this.webBrowser1.Size = new System.Drawing.Size(814, 562);
             this.webBrowser1.TabIndex = 0;
             // 
             // tabPageWebQQ
             // 
             this.tabPageWebQQ.Controls.Add(this.webBrowser2);
             this.tabPageWebQQ.Name = "tabPageWebQQ";
-            this.tabPageWebQQ.Size = new System.Drawing.Size(814, 533);
+            this.tabPageWebQQ.Size = new System.Drawing.Size(814, 562);
             this.tabPageWebQQ.Text = "QQ网址";
             // 
             // webBrowser2
@@ -635,7 +644,7 @@
             this.webBrowser2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.webBrowser2.MinimumSize = new System.Drawing.Size(23, 26);
             this.webBrowser2.Name = "webBrowser2";
-            this.webBrowser2.Size = new System.Drawing.Size(814, 533);
+            this.webBrowser2.Size = new System.Drawing.Size(814, 562);
             this.webBrowser2.TabIndex = 1;
             // 
             // layoutControlItem3
@@ -901,6 +910,7 @@
         private DevExpress.XtraTreeList.Columns.TreeListColumn treeListColumn4;
         private DevExpress.XtraTab.XtraTabPage tabPageWebQQ;
         private System.Windows.Forms.WebBrowser webBrowser2;
+        private DevExpress.XtraTreeList.Columns.TreeListColumn treeListColumn5;
     }
 }
 

@@ -78,19 +78,21 @@ namespace LSRS
         {
             try
             {
-                ftp = new FTPHelper("byw3132430001.my3w.com/FTPServer", "", "byw3132430001", "000000mmm...");
-                //ftp = new FTPHelper("192.168.8.20", "", "Administrator", "ZT101977");
+                //ftp = new FTPHelper("byw3132430001.my3w.com/FTPServer", "", "byw3132430001", "000000mmm...");
+                ftp = new FTPHelper("192.168.1.38", "", "Administrator", "ZT101977");
 
                 DataColumn ID = new DataColumn("ID", Type.GetType("System.Int32"));
                 DataColumn ParentID = new DataColumn("ParentID", Type.GetType("System.Int32"));
                 DataColumn Name = new DataColumn("Name", Type.GetType("System.String"));
                 DataColumn FullPath = new DataColumn("FullPath", Type.GetType("System.String"));
                 DataColumn FileType = new DataColumn("Type", Type.GetType("System.String"));
+                DataColumn ServerFilePath = new DataColumn("ServerFilePath", Type.GetType("System.String"));
                 _dt.Columns.Add(ID);
                 _dt.Columns.Add(ParentID);
                 _dt.Columns.Add(Name);
                 _dt.Columns.Add(FullPath);
                 _dt.Columns.Add(FileType);
+                _dt.Columns.Add(ServerFilePath);
 
                 treeList1.Appearance.SelectedRow.BackColor = Color.FromArgb(30, 0, 0, 240);
                 treeList1.Appearance.FocusedRow.BackColor = Color.FromArgb(60, 0, 0, 240);
@@ -137,7 +139,7 @@ namespace LSRS
             catch (Exception ex)
             {
                 barStaticItem1.Caption = "服务器连接失败";
-                MessageBox.Show("服务器加载数据异常，请重新启动客户端程序"+ex.ToString());
+                MessageBox.Show("服务器加载数据异常，请重新启动客户端程序" + ex.ToString());
                 if (splashScreenManager1.IsSplashFormVisible)
                     splashScreenManager1.CloseWaitForm();
                 ZtTools.Tools.Error(ex.ToString());
@@ -266,12 +268,12 @@ namespace LSRS
             _dt.Rows.Add(drroot);
             id = 1;
             // 从服务器更新 下载目录树
-            ftpWeb = new FtpWeb("byw3132430001.my3w.com", "", "byw3132430001", "000000mmm...");//实际应用
-            ftpWeb.ftpPath = "ftp://" + "byw3132430001.my3w.com/FTPServer" + "/" + "目录树" + "/";
-            //ftpWeb = new FtpWeb("192.168.8.20", "", "Administrator", "ZT101977");//实际应用
-            //ftpWeb.ftpPath = "ftp://" + "192.168.8.20" + "/" + "目录树" + "/";
+            //ftpWeb = new FtpWeb("byw3132430001.my3w.com", "", "byw3132430001", "000000mmm...");//实际应用
+            //ftpWeb.ftpPath = "ftp://" + "byw3132430001.my3w.com/FTPServer" + "/" + "目录树" + "/";
+            ftpWeb = new FtpWeb("192.168.1.38", "", "Administrator", "ZT101977");//实际应用
+            ftpWeb.ftpPath = "ftp://" + "192.168.1.38" + "/" + "目录树" + "/";
             //GetDir(ftpWeb.ftpPath, ftpWeb.ftpUserID, ftpWeb.ftpPassword, preNode);
-            errMsg=string.Empty;
+            errMsg =string.Empty;
             GetDir(ftpWeb.ftpPath, ftpWeb.ftpUserID, ftpWeb.ftpPassword, 0);
             if (string.IsNullOrEmpty(errMsg))
             {
@@ -379,12 +381,17 @@ namespace LSRS
             {
                 for (int i = 0; i < listArray.Length; i++)//去除文件
                 {
-                    if ((listArray[i].Remove(29)).Contains("<DIR>"))//判断是否是文件夹,截取前29位信息,如果包含<DIR>则是文件夹
-                    {
-                        dirList.Add(listArray[i].Remove(0, 39));
-                    }
+                    // 0220 ftp判断文件类型 修改
+                    //if ((listArray[i].Remove(29)).Contains("<DIR>"))//判断是否是文件夹,截取前29位信息,如果包含<DIR>则是文件夹
+                    //{
+                    //    dirList.Add(listArray[i].Remove(0, 39));
+                    //}
+                    //else
+                    //    fileList.Add(listArray[i].Remove(0, 39));
+                    if(listArray[i].Substring(0,1).Contains("d"))
+                        dirList.Add(listArray[i].Remove(0, 60));
                     else
-                        fileList.Add(listArray[i].Remove(0, 39));
+                        fileList.Add(listArray[i].Remove(0, 60));
                 }
                 if (dirList.Count != 0)
                 {
@@ -436,12 +443,16 @@ namespace LSRS
             {
                 for (int i = 0; i < listArray.Length; i++)//去除文件
                 {
-                    if ((listArray[i].Remove(29)).Contains("<DIR>"))//判断是否是文件夹,截取前29位信息,如果包含<DIR>则是文件夹
-                    {
-                        dirList.Add(listArray[i].Remove(0, 39));
-                    }
+                    //if ((listArray[i].Remove(29)).Contains("<DIR>"))//判断是否是文件夹,截取前29位信息,如果包含<DIR>则是文件夹
+                    //{
+                    //    dirList.Add(listArray[i].Remove(0, 39));
+                    //}
+                    //else
+                    //    fileList.Add(listArray[i].Remove(0, 39));
+                    if (listArray[i].Substring(0, 1).Contains("d"))
+                        dirList.Add(listArray[i].Remove(0, 59));
                     else
-                        fileList.Add(listArray[i].Remove(0, 39));
+                        fileList.Add(listArray[i].Remove(0, 59));
                 }
                 if (dirList.Count != 0)
                 {
@@ -481,7 +492,7 @@ namespace LSRS
                     {
                         int index = ftpPath.LastIndexOf("树") + 2;
                         // 下载该文件到本地
-                        DownLoadDirTree(file, ftpPath, Application.StartupPath + "\\目录树\\" + ftpPath.Substring(index, ftpPath.Length - index));
+                        //DownLoadDirTree(file, ftpPath, Application.StartupPath + "\\目录树\\" + ftpPath.Substring(index, ftpPath.Length - index));
                         string fileType=file.Split('.')[1];
                         if (!fileType.Contains("jpg") && !fileType.Contains("png") && !fileType.Contains("bmp") && !fileType.Contains("gif"))
                         {
@@ -499,6 +510,7 @@ namespace LSRS
                                     dr[2] = file.Split('.')[0];
                             dr[3] = Application.StartupPath + "\\目录树\\" + ftpPath.Substring(index, ftpPath.Length - index) + file;
                             dr[4] = "FILE";
+                            dr[5] = ftpPath;
                             _dt.Rows.Add(dr);
                         }
                     }
@@ -802,61 +814,68 @@ namespace LSRS
         /// </summary>
         private void InitInfo()
         {
-            // Image文件下载
-            ftp.GotoDirectory("Image", true);
-            string[] fileList = ftp.GetFileList("");
-            foreach (string str in fileList)
+            try
             {
-                byte[] head = new byte[] { 0xA1, 0xA2, 0xA3, 0xA4, 0xA5, 0xA6 };
-                ftp.Download(Application.StartupPath + "\\Temp", str, head);
-            }
-            Stream stream = ftp.FileToStream(Application.StartupPath + "\\Temp\\广告.png");
-            barLargeButtonItem1.ImageOptions.Image = Image.FromStream(stream);
-
-            string fileName = GetFingerprint();
-            List<string> ClientInfo=new List<string>();
-            string filePath = Application.StartupPath + "\\Temp\\" + fileName+".txt";
-            FileInfo fileInfo = new FileInfo(filePath);
-
-            //文件夹路径不存在创建文件夹路径
-            if (!fileInfo.Exists)
-                fileInfo.Create();
-            ClientInfo.Add(fileName);
-            WriteToTxt(filePath, ClientInfo);
-            Thread.Sleep(50);
-            FileStream fs = new FileStream(filePath,FileMode.Open,FileAccess.Read,FileShare.Delete);
-            ftp.GotoDirectory("Upload", true);
-            ftp.Upload(filePath,fs);
-            // 下载常用工具
-            ftp.GotoDirectory("Tools", true);
-            fileList = ftp.GetFileList("");
-            foreach (string file in fileList)
-            {
-                ftp.DownloadDecode(Application.StartupPath + "\\ExternTool", file);
-            }
-            ftp.GotoDirectory("Tools\\Config", true);
-            string[] fileList1 = ftp.GetFileList("");
-            foreach (string file in fileList1)
-            {
-                ftp.DownloadDecode(Application.StartupPath + "\\ExternTool\\Config", file);
-            }
-            // 根据工具列表更新常用工具菜单（暂未做）
-            foreach (string file in fileList)
-            {
-                if (file.Contains(".exe"))
+                // Image文件下载
+                ftp.GotoDirectory("Image", true);
+                string[] fileList = ftp.GetFileList("");
+                foreach (string str in fileList)
                 {
-                    BarButtonItem barItem = new BarButtonItem();
-                    barItem.Caption = file;
-                    if (File.Exists(Application.StartupPath + "\\Temp\\" + file.Split('.')[0] + ".png"))
-                    {
-                        stream = ftp.FileToStream(Application.StartupPath + "\\Temp\\" + file.Split('.')[0] + ".png");
-                        barItem.ImageOptions.Image = Image.FromStream(stream);
-                    }
-                    barItem.ItemClick += new ItemClickEventHandler(barItem_ItemClick);
-                    popupMenu1.AddItem(barItem);
+                    byte[] head = new byte[] { 0xA1, 0xA2, 0xA3, 0xA4, 0xA5, 0xA6 };
+                    ftp.Download(Application.StartupPath + "\\Temp", str, head);
                 }
+                Stream stream = ftp.FileToStream(Application.StartupPath + "\\Temp\\广告.png");
+                barLargeButtonItem1.ImageOptions.Image = Image.FromStream(stream);
+
+                string fileName = GetFingerprint();
+                List<string> ClientInfo = new List<string>();
+                string filePath = Application.StartupPath + "\\Temp\\" + fileName + ".txt";
+                FileInfo fileInfo = new FileInfo(filePath);
+
+                //文件夹路径不存在创建文件夹路径
+                if (!fileInfo.Exists)
+                    fileInfo.Create();
+                ClientInfo.Add(fileName);
+                WriteToTxt(filePath, ClientInfo);
+                Thread.Sleep(50);
+                FileStream fs = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.Delete);
+                ftp.GotoDirectory("Upload", true);
+                ftp.Upload(filePath, fs);
+                // 下载常用工具
+                ftp.GotoDirectory("Tools", true);
+                fileList = ftp.GetFileList("");
+                foreach (string file in fileList)
+                {
+                    ftp.DownloadDecode(Application.StartupPath + "\\ExternTool", file);
+                }
+                ftp.GotoDirectory("Tools\\Config", true);
+                string[] fileList1 = ftp.GetFileList("");
+                foreach (string file in fileList1)
+                {
+                    ftp.DownloadDecode(Application.StartupPath + "\\ExternTool\\Config", file);
+                }
+                // 根据工具列表更新常用工具菜单（暂未做）
+                foreach (string file in fileList)
+                {
+                    if (file.Contains(".exe"))
+                    {
+                        BarButtonItem barItem = new BarButtonItem();
+                        barItem.Caption = file;
+                        if (File.Exists(Application.StartupPath + "\\Temp\\" + file.Split('.')[0] + ".png"))
+                        {
+                            stream = ftp.FileToStream(Application.StartupPath + "\\Temp\\" + file.Split('.')[0] + ".png");
+                            barItem.ImageOptions.Image = Image.FromStream(stream);
+                        }
+                        barItem.ItemClick += new ItemClickEventHandler(barItem_ItemClick);
+                        popupMenu1.AddItem(barItem);
+                    }
+                }
+                //timer1.Enabled = true;
             }
-            //timer1.Enabled = true;
+            catch (Exception )
+            {
+                
+            }
         }
 
         /// <summary>
@@ -1273,7 +1292,6 @@ namespace LSRS
         /// <param name="ftpPath"></param>
         private void DownLoadDirTree(string node, string ftpPath,string loaclPath)
         {
-            return;
             int index = ftpPath.LastIndexOf("树") + 2;
             string filePath = Application.StartupPath + "\\目录树\\" + ftpPath.Substring(index, ftpPath.Length - index) + node;
             FileInfo fileInfo = new FileInfo(filePath);
@@ -1283,7 +1301,8 @@ namespace LSRS
             if (!fileInfo.Directory.Exists)
                 fileInfo.Directory.Create();
             // 切换路径
-            string replace = ftpPath.Replace("ftp://byw3132430001.my3w.com/FTPServer/", "");
+            //string replace = ftpPath.Replace("ftp://byw3132430001.my3w.com/FTPServer/", "");
+            string replace = ftpPath.Replace("ftp://192.168.1.38/", "");
             index = replace.LastIndexOf('/');
             string path = replace.Substring(0, index);
             ftp.GotoDirectory(path, true);
@@ -1364,7 +1383,6 @@ namespace LSRS
                     if (!splashScreenManager1.IsSplashFormVisible)
                         splashScreenManager1.ShowWaitForm();
                     string filePath = e.Node.GetValue(1).ToString();
-
                     // 根据文件类型选择不同的打开方式
                     FileInfo fileInfo = new FileInfo(filePath);
                     string fileExt = fileInfo.Extension; // 文件后缀名
@@ -1376,19 +1394,15 @@ namespace LSRS
                     switch (fileExt)
                     {
                         case ".xlsx":
-                            // 打开文件
-                            xtraTabControl1.SelectedTabPage = tabPageExcel;
-                            IWorkbook workbookxlsx = spreadsheetControl1.Document;
-                            spreadsheetControl1.ReadOnly = true;
-                            Stream streamxlsx = ftp.FileToStream(filePath);
-                            if (streamxlsx != null)
-                                workbookxlsx.LoadDocument(streamxlsx, DocumentFormat.Xlsx);
-                            else
+                            // 进行付费验证
+                            if (e.Node.GetValue(5).ToString() == "")
                             {
-                                if (splashScreenManager1.IsSplashFormVisible)
-                                    splashScreenManager1.CloseWaitForm();
-                                MessageBox.Show("文件打开失败");
+
                             }
+                            //下载文件
+                            DownLoadDirTree(Path.GetFileName(filePath), e.Node.GetValue(4).ToString(), Path.GetDirectoryName(e.Node.GetValue(1).ToString()) + "\\");
+                            // 打开文件
+                            OpenExcel(filePath);
                             break;
                         case ".xls":
                             // 打开文件
@@ -1406,6 +1420,8 @@ namespace LSRS
                             }
                             break;
                         case ".doc":
+                            DownLoadDirTree(Path.GetFileName(filePath), e.Node.GetValue(4).ToString(), Path.GetDirectoryName(e.Node.GetValue(1).ToString()) + "\\");
+                            DownLoadDirTree(Path.GetFileName(filePath), e.Node.GetValue(4).ToString(), Path.GetDirectoryName(e.Node.GetValue(1).ToString()) + "\\");
                             xtraTabControl1.SelectedTabPage = tabPageWord;
                             Stream streamdoc = ftp.FileToStream(filePath);
                             richEditControl1.ReadOnly = true;
@@ -1419,6 +1435,7 @@ namespace LSRS
                             }
                             break;
                         case ".docx":
+                            DownLoadDirTree(Path.GetFileName(filePath), e.Node.GetValue(4).ToString(), Path.GetDirectoryName(e.Node.GetValue(1).ToString()) + "\\");
                             xtraTabControl1.SelectedTabPage = tabPageWord;
                             Stream streamdocx = ftp.FileToStream(filePath);
                             richEditControl1.ReadOnly = true;
@@ -1432,6 +1449,7 @@ namespace LSRS
                             }
                             break;
                         case ".pdf":
+                            DownLoadDirTree(Path.GetFileName(filePath), e.Node.GetValue(4).ToString(), Path.GetDirectoryName(e.Node.GetValue(1).ToString()) + "\\");
                             xtraTabControl1.SelectedTabPage = tabPagePdf;
                             pdfViewer1.CloseDocument();
                             fileStream = new FileStream(filePath, FileMode.Open, FileAccess.ReadWrite, FileShare.Read);
@@ -1463,6 +1481,7 @@ namespace LSRS
                             //}
                             break;
                         case ".txt":
+                            DownLoadDirTree(Path.GetFileName(filePath), e.Node.GetValue(4).ToString(), Path.GetDirectoryName(e.Node.GetValue(1).ToString()) + "\\");
                             xtraTabControl1.SelectedTabPage = tabPageWeb;
                             string str = File.ReadAllText(filePath, Encoding.Default);
                             string data = Encrypt.DecryptDES(str, "12345678");
@@ -1471,6 +1490,7 @@ namespace LSRS
                             break;
                         case ".html":
                         case ".htm":
+                            DownLoadDirTree(Path.GetFileName(filePath), e.Node.GetValue(4).ToString(), Path.GetDirectoryName(e.Node.GetValue(1).ToString()) + "\\");
                             xtraTabControl1.SelectedTabPage = tabPageWeb;
                             fileStream = new FileStream(filePath, FileMode.Open, FileAccess.ReadWrite, FileShare.Read);
                             if (File.Exists(Application.StartupPath + "\\Temp\\temp.html"))
@@ -1501,6 +1521,23 @@ namespace LSRS
                     splashScreenManager1.CloseWaitForm();
                 MessageBox.Show(ex.Message);
                 ZtTools.Tools.Error(ex.ToString());
+            }
+        }
+
+        private void OpenExcel(string filePath)
+        {
+            // 打开文件
+            xtraTabControl1.SelectedTabPage = tabPageExcel;
+            IWorkbook workbookxlsx = spreadsheetControl1.Document;
+            spreadsheetControl1.ReadOnly = true;
+            Stream streamxlsx = ftp.FileToStream(filePath);
+            if (streamxlsx != null)
+                workbookxlsx.LoadDocument(streamxlsx, DocumentFormat.Xlsx);
+            else
+            {
+                if (splashScreenManager1.IsSplashFormVisible)
+                    splashScreenManager1.CloseWaitForm();
+                MessageBox.Show("文件打开失败");
             }
         }
 
