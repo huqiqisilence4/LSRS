@@ -61,12 +61,32 @@ namespace LSRS.Properties {
         }
         
         /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap _165x58 {
+            get {
+                object obj = ResourceManager.GetObject("165x58", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   查找类似于 (图标) 的 System.Drawing.Icon 类型的本地化资源。
         /// </summary>
         internal static System.Drawing.Icon logo {
             get {
                 object obj = ResourceManager.GetObject("logo", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 微信支付logo_中文彩_ {
+            get {
+                object obj = ResourceManager.GetObject("微信支付logo(中文彩)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

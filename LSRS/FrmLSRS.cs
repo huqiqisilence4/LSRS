@@ -1397,12 +1397,19 @@ namespace LSRS
                             // 进行付费验证
                             if (e.Node.GetValue(5).ToString() == "")
                             {
-
+                                if (splashScreenManager1.IsSplashFormVisible)
+                                    splashScreenManager1.CloseWaitForm();
+                                FrmPay frmPay = new FrmPay((float)10.5);
+                                if(frmPay.ShowDialog()==DialogResult.OK)
+                                {
+                                    if (!splashScreenManager1.IsSplashFormVisible)
+                                        splashScreenManager1.ShowWaitForm();
+                                    //下载文件
+                                    DownLoadDirTree(Path.GetFileName(filePath), e.Node.GetValue(4).ToString(), Path.GetDirectoryName(e.Node.GetValue(1).ToString()) + "\\");
+                                    // 打开文件
+                                    OpenExcel(filePath);
+                                }
                             }
-                            //下载文件
-                            DownLoadDirTree(Path.GetFileName(filePath), e.Node.GetValue(4).ToString(), Path.GetDirectoryName(e.Node.GetValue(1).ToString()) + "\\");
-                            // 打开文件
-                            OpenExcel(filePath);
                             break;
                         case ".xls":
                             // 打开文件
@@ -1524,6 +1531,10 @@ namespace LSRS
             }
         }
 
+        /// <summary>
+        /// 打开Excel
+        /// </summary>
+        /// <param name="filePath"></param>
         private void OpenExcel(string filePath)
         {
             // 打开文件
@@ -1562,6 +1573,14 @@ namespace LSRS
             }
             catch (Exception ex)
             { 
+                
+            }
+        }
+
+        private void treeList1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
                 
             }
         }

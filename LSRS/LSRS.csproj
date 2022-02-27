@@ -153,6 +153,10 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="ThoughtWorks.QRCode, Version=1.0.4778.30637, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\ThoughtWorks.QRCode.dll</HintPath>
+    </Reference>
     <Reference Include="ZtTools">
       <HintPath>bin\Debug\bin\ZtTools.dll</HintPath>
     </Reference>
@@ -169,6 +173,12 @@
     </Compile>
     <Compile Include="FrmLSRS.Designer.cs">
       <DependentUpon>FrmLSRS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPay.Designer.cs">
+      <DependentUpon>FrmPay.cs</DependentUpon>
     </Compile>
     <Compile Include="FTP\FTPClient.cs" />
     <Compile Include="FTP\FTPHelper.cs" />
@@ -189,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLSRS.resx">
       <DependentUpon>FrmLSRS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPay.resx">
+      <DependentUpon>FrmPay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -240,7 +253,32 @@
     <Content Include="Image\QQ五笔截图未命名.png" />
     <Content Include="Image\料事如神--图标logo.png" />
     <Content Include="logo.ico" />
+    <Content Include="Resources\icons\165x58.png" />
+    <Content Include="Resources\icons\36x36.png" />
+    <Content Include="Resources\icons\64x64.png" />
+    <Content Include="Resources\icons\add2.png" />
+    <Content Include="Resources\icons\AutoUpdate.ico" />
+    <Content Include="Resources\icons\contact_user.png" />
+    <Content Include="Resources\icons\delete.png" />
+    <Content Include="Resources\icons\edit.gif" />
+    <Content Include="Resources\icons\Excel.png" />
+    <Content Include="Resources\icons\ServerConfig.ico" />
+    <Content Include="Resources\icons\StationSystem.ico" />
+    <Content Include="Resources\icons\weixin.png" />
+    <Content Include="Resources\icons\微信.ico" />
+    <Content Include="Resources\icons\微信128X128.ico" />
+    <Content Include="Resources\icons\微信64X64.ico" />
+    <Content Include="Resources\icons\微信支付logo%28中文彩%29.png" />
+    <Content Include="WeChatAliPay.config.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WeChatAliPay\WeChatAliPay.csproj">
+      <Project>{9e7d8ae2-494a-46d3-9e45-29b3143e795a}</Project>
+      <Name>WeChatAliPay</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
