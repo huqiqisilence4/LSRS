@@ -65,20 +65,35 @@
     <Compile Include="WeChatAliConfig\Ali\LogHelper.cs" />
     <Compile Include="WeChatAliConfig\WeChat\Config.cs" />
     <Compile Include="WeChatAliConfig\WeChat\Data.cs" />
+    <Compile Include="WeChatAliConfig\WeChat\PayConfig.cs" />
     <Compile Include="WeChatAliConfig\WeChat\Exception.cs" />
     <Compile Include="WeChatAliConfig\WeChat\HttpService.cs" />
+    <Compile Include="WeChatAliConfig\WeChat\IConfig.cs" />
     <Compile Include="WeChatAliConfig\WeChat\Log.cs" />
     <Compile Include="WeChatAliConfig\WeChat\MicroPay.cs" />
     <Compile Include="WeChatAliConfig\WeChat\NativeNotify.cs" />
     <Compile Include="WeChatAliConfig\WeChat\NativePay.cs" />
     <Compile Include="WeChatAliConfig\WeChat\Notify.cs" />
+    <Compile Include="WeChatAliConfig\WeChat\RandomGenerator.cs" />
+    <Compile Include="WeChatAliConfig\WeChat\SafeXmlDocument.cs" />
     <Compile Include="WeChatAliConfig\WeChat\WxPayApi.cs" />
     <Compile Include="WeChatPay.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="lib\Ali\AopSdk.dll" />
     <Content Include="lib\Ali\F2FPayDll.dll" />
-    <Content Include="lib\WeChat\LitJson.dll" />
+    <Content Include="lib\WeChat\LitJson.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\WeChat\QuickMark.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\WeChat\RestSharp.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\WeChat\ThoughtWorks.QRCode.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="WeChatAliPay.config.xml" />
   </ItemGroup>
   <ItemGroup>

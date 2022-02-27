@@ -19,13 +19,14 @@ namespace WeChatAliPayService.Common
         {
             //string result = MicroPay.Run("车票", (Convert.ToDouble(money) * 100).ToString(), auth_code, out_trade_no);
             //测试
-            string result = MicroPay.Run("车票", "1", auth_code, out_trade_no);
+            string result = MicroPay.Run("车票", "1", auth_code);
             return result;
         }
 
-        public static string WeChatNativePay(string productId)
+        public static string WeChatNativePay(string productId, int money)
         {
-            string result = NativePay.GetPrePayUrl(productId);
+            //string result = NativePay.GetPrePayUrl(productId);
+            string result = NativePay.GetPayUrl(productId, money);
             return result;
         }
 
@@ -83,7 +84,7 @@ namespace WeChatAliPayService.Common
             data.SetValue("total_fee", 1);//订单总金额
             data.SetValue("refund_fee", 1);//退款金额
             data.SetValue("out_refund_no", WxPayApi.GenerateOutTradeNo());//随机生成商户退款单号
-            data.SetValue("op_user_id", WxPayConfig.WeChatMchid);//操作员，默认为商户号
+            data.SetValue("op_user_id", WxPayConfig.Config().GetMchID());//操作员，默认为商户号
 
             WxPayData result = WxPayApi.Refund(data);//提交退款申请给API，接收返回数据
 

@@ -9,16 +9,16 @@ using System.Web;
 /// </summary>
 namespace Com.Alipay
 {
-    public class AliConfig
+    public class Config
     {
-        public static string alipay_public_key {get;set;}
-        
-        
-        //这里要配置没有经过的原始私钥
+        public static string alipay_public_key { get; set; }
 
-        //开发者私钥
-        public static string merchant_private_key { get; set; }
-        
+
+    //这里要配置没有经过的原始私钥
+
+    //开发者私钥
+    public static string merchant_private_key { get; set; }
+
         //开发者公钥
         public static string merchant_public_key { get; set; }
 
@@ -27,7 +27,6 @@ namespace Com.Alipay
 
         //合作伙伴ID：partnerID
         public static string pid { get; set; }
-
         // 该笔订单允许的最晚付款时间，逾期将关闭交易 单位：分钟
         public static string timeOut = "2m";
 
@@ -52,6 +51,7 @@ namespace Com.Alipay
         // 商品名称  
         public static string sys_service_provider_id = "";
 
+
         //支付宝网关
         public static string serverUrl = "https://openapi.alipay.com/gateway.do";
         public static string mapiUrl = "https://mapi.alipay.com/gateway.do";
@@ -64,7 +64,7 @@ namespace Com.Alipay
         public static string sign_type = "RSA2";
         //版本号，无需修改
         public static string version = "1.0";
-         
+
 
         /// <summary>
         /// 公钥文件类型转换成纯文本类型
@@ -77,10 +77,10 @@ namespace Com.Alipay
             sr.Close();
             if (pubkey != null)
             {
-              pubkey=  pubkey.Replace("-----BEGIN PUBLIC KEY-----", "");
-              pubkey = pubkey.Replace("-----END PUBLIC KEY-----", "");
-              pubkey = pubkey.Replace("\r", "");
-              pubkey = pubkey.Replace("\n", "");
+                pubkey = pubkey.Replace("-----BEGIN PUBLIC KEY-----", "");
+                pubkey = pubkey.Replace("-----END PUBLIC KEY-----", "");
+                pubkey = pubkey.Replace("\r", "");
+                pubkey = pubkey.Replace("\n", "");
             }
             return pubkey;
         }

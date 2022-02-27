@@ -15,7 +15,7 @@ namespace WeChatAliPay
 
         public static string ReadWeChatConfig()
         {
-            if (AliConfig.appId != null && AliConfig.appId != "")
+            if (Config.appId != null && Config.appId != "")
             {
                 return "";
             }
@@ -37,22 +37,22 @@ namespace WeChatAliPay
                                 {
                                     // 微信参数
                                     case "WeChatMicroPayUrl":
-                                        WxPayConfig.WeChatMicroPayUrl = el.Attributes["value"].Value;
+                                        //WxPayConfig.WeChatMicroPayUrl = el.Attributes["value"].Value;
                                         break;
                                     case "WeChatOrderQueryUrl":
-                                        WxPayConfig.WeChatOrderQueryUrl = el.Attributes["value"].Value;
+                                        //WxPayConfig.WeChatOrderQueryUrl = el.Attributes["value"].Value;
                                         break;
                                     case "WeChatCloseOrderUrl":
-                                        WxPayConfig.WeChatCloseOrderUrl = el.Attributes["value"].Value;
+                                        //WxPayConfig.WeChatCloseOrderUrl = el.Attributes["value"].Value;
                                         break;
                                     case "WeChatPayAPIKey":
-                                        WxPayConfig.WeChatPayAPIKey = el.Attributes["value"].Value;
+                                        WxPayConfig.Config().SetKey(el.Attributes["value"].Value);
                                         break;
                                     case "WeChatAppid":
-                                        WxPayConfig.WeChatAppid = el.Attributes["value"].Value;
+                                        WxPayConfig.Config().SetAppID(el.Attributes["value"].Value);
                                         break;
                                     case "WeChatMchid":
-                                        WxPayConfig.WeChatMchid = el.Attributes["value"].Value;
+                                        WxPayConfig.Config().SetMchID(el.Attributes["value"].Value);
                                         break;
                                     //case "WeChatDeviceInfo":
                                     //    RC.ClientDesktop.Common.Application.Instance.WeChatCloseOrderUrl = el.Attributes["value"].Value;
@@ -65,46 +65,46 @@ namespace WeChatAliPay
                                     //    break;
                                     // 支付宝参数
                                     case "AliPayGateway":
-                                        AliConfig.serverUrl = el.Attributes["value"].Value;
+                                        Config.serverUrl = el.Attributes["value"].Value;
                                         break;
                                     case "AliPayAppId":
-                                        AliConfig.appId = el.Attributes["value"].Value;
+                                        Config.appId = el.Attributes["value"].Value;
                                         break;
                                     case "AliPayAppPrivateKey":
-                                        AliConfig.merchant_private_key = el.Attributes["value"].Value;
+                                        Config.merchant_private_key = el.Attributes["value"].Value;
                                         break;
                                     case "AliPayPublicKey":
-                                        AliConfig.alipay_public_key = el.Attributes["value"].Value;
+                                        Config.alipay_public_key = el.Attributes["value"].Value;
                                         break;
                                     case "AliPayPid":
-                                        AliConfig.pid = el.Attributes["value"].Value;
+                                        Config.pid = el.Attributes["value"].Value;
                                         break;
                                     case "AliPayAppPublicKey":
-                                        AliConfig.merchant_public_key = el.Attributes["value"].Value;
+                                        Config.merchant_public_key = el.Attributes["value"].Value;
                                         break;
                                     case "AliTimeOut":
-                                        AliConfig.timeOut = el.Attributes["value"].Value;
+                                        Config.timeOut = el.Attributes["value"].Value;
                                         break;
                                     case "AliSubJect":
-                                        AliConfig.subject = el.Attributes["value"].Value;
+                                        Config.subject = el.Attributes["value"].Value;
                                         break;
                                     case "Body":
-                                        AliConfig.body = el.Attributes["value"].Value;
+                                        Config.body = el.Attributes["value"].Value;
                                         break;
                                     case "store_id":
-                                        AliConfig.store_id = el.Attributes["value"].Value;
+                                        Config.store_id = el.Attributes["value"].Value;
                                         break;
                                     case "operator_id":
-                                        AliConfig.operator_id = el.Attributes["value"].Value;
+                                        Config.operator_id = el.Attributes["value"].Value;
                                         break;
                                     case "goods_id":
-                                        AliConfig.goods_id = el.Attributes["value"].Value;
+                                        Config.goods_id = el.Attributes["value"].Value;
                                         break;
                                     case "goods_name":
-                                        AliConfig.goods_name = el.Attributes["value"].Value;
+                                        Config.goods_name = el.Attributes["value"].Value;
                                         break;
                                     case "sys_service_provider_id":
-                                        AliConfig.sys_service_provider_id = el.Attributes["value"].Value;
+                                        Config.sys_service_provider_id = el.Attributes["value"].Value;
                                         break;
                                     default:
                                         break;

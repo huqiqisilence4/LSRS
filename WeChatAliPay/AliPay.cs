@@ -11,6 +11,9 @@ using Com.Alipay.Business;
 using Com.Alipay.Model;
 using System.Xml;
 using System.Runtime.Serialization.Json;
+using Aop.Api.Request;
+using Aop.Api;
+using System.Threading;
 
 namespace WeChatAliPayService.Common
 {
@@ -20,8 +23,16 @@ namespace WeChatAliPayService.Common
         IAlipayTradeService serviceClient = F2FBiz.CreateClientInstance(AliConfig.serverUrl, AliConfig.appId, AliConfig.merchant_private_key, AliConfig.version,
                      AliConfig.sign_type, AliConfig.alipay_public_key, AliConfig.charset);
         */
+        private static IAlipayTradeService serviceClient = F2FBiz.CreateClientInstance(Config.serverUrl, Config.appId, Config.merchant_private_key, Config.version,
+                        Config.sign_type, Config.alipay_public_key, Config.charset);
+        public AliPay(string serverUrl, string appId, string merchant_private_key, string format, string version,
+     string sign_type, string alipay_public_key, string charset) 
+        {
+            //client = new DefaultAopClient(serverUrl, appId, merchant_private_key, format, version,
+            //     sign_type, alipay_public_key, charset);
+        }
 
-        private bool ValidateServerCertificate(object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors)
+        private static bool ValidateServerCertificate(object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors)
         {
             return true;
         }
@@ -39,8 +50,8 @@ namespace WeChatAliPayService.Common
             {
                 //log4net.Config.XmlConfigurator.ConfigureAndWatch(new System.IO.FileInfo("log4net.cfg.xml"));    //ASP.NET
                 AlipayTradePayContentBuilder builder = BuildPayContent(money, auth_code, out_trade_no, oper);
-                IAlipayTradeService serviceClient = F2FBiz.CreateClientInstance(AliConfig.serverUrl, AliConfig.appId, AliConfig.merchant_private_key, AliConfig.version,
-                                                                                AliConfig.sign_type, AliConfig.alipay_public_key, AliConfig.charset);
+                IAlipayTradeService serviceClient = F2FBiz.CreateClientInstance(Config.serverUrl, Config.appId, Config.merchant_private_key, Config.version,
+                                                                                Config.sign_type, Config.alipay_public_key, Config.charset);
                 IDictionary<string, string> payParam = new Dictionary<string, string>();
                 payParam.Add("out_trade_no", builder.out_trade_no); //订单号
                 payParam.Add("seller_id", builder.seller_id);       //收款账号
@@ -78,7 +89,7 @@ namespace WeChatAliPayService.Common
             AlipayTradePayContentBuilder builder = new AlipayTradePayContentBuilder();
 
             //收款账号
-            builder.seller_id = AliConfig.pid;
+            builder.seller_id = Config.pid;
             //订单编号
             builder.out_trade_no = out_trade_no;
             //支付场景，无需修改
@@ -94,13 +105,13 @@ namespace WeChatAliPayService.Common
             //不参与优惠计算的金额
             //builder.undiscountable_amount = "";
             //订单名称
-            builder.subject = AliConfig.subject;
+            builder.subject = Config.subject;
             //自定义超时时间
-            builder.timeout_express = AliConfig.timeOut;
+            builder.timeout_express = Config.timeOut;
             //订单描述
-            builder.body = AliConfig.body;
+            builder.body = Config.body;
             //门店编号，很重要的参数，可以用作之后的营销
-            builder.store_id = AliConfig.store_id;
+            builder.store_id = Config.store_id;
             //操作员编号，很重要的参数，可以用作之后的营销
             builder.operator_id = oper;
 
@@ -109,8 +120,8 @@ namespace WeChatAliPayService.Common
             List<GoodsInfo> gList = new List<GoodsInfo>();
 
             GoodsInfo goods = new GoodsInfo();
-            goods.goods_id = AliConfig.goods_id;
-            goods.goods_name = AliConfig.goods_name;
+            goods.goods_id = Config.goods_id;
+            goods.goods_name = Config.goods_name;
             goods.price = money;
             goods.quantity = "1";
             gList.Add(goods);
@@ -118,7 +129,7 @@ namespace WeChatAliPayService.Common
 
             //系统商接入可以填此参数用作返佣
             ExtendParams exParam = new ExtendParams();
-            exParam.sys_service_provider_id = AliConfig.sys_service_provider_id;
+            exParam.sys_service_provider_id = Config.sys_service_provider_id;
             builder.extend_params = exParam;
             return builder;
 
@@ -138,8 +149,8 @@ namespace WeChatAliPayService.Common
             {
                 //log4net.Config.XmlConfigurator.ConfigureAndWatch(new System.IO.FileInfo("log4net.cfg.xml"));    //ASP.NET
                 AlipayTradeRefundContentBuilder builder = BuildContent(out_trade_no, out_request_no, money, refund_reason);
-                IAlipayTradeService serviceClient = F2FBiz.CreateClientInstance(AliConfig.serverUrl, AliConfig.appId, AliConfig.merchant_private_key, AliConfig.version,
-                    AliConfig.sign_type, AliConfig.alipay_public_key, AliConfig.charset);
+                IAlipayTradeService serviceClient = F2FBiz.CreateClientInstance(Config.serverUrl, Config.appId, Config.merchant_private_key, Config.version,
+                    Config.sign_type, Config.alipay_public_key, Config.charset);
                 IDictionary<string, string> payParam = new Dictionary<string, string>();
                 payParam.Add("out_trade_no", builder.out_trade_no); //订单号
                 payParam.Add("out_request_no", builder.out_request_no);       //退款请求单号保持唯一性。
@@ -193,8 +204,8 @@ namespace WeChatAliPayService.Common
             try
             {
                 //log4net.Config.XmlConfigurator.ConfigureAndWatch(new System.IO.FileInfo("log4net.cfg.xml"));    //ASP.NET
-                IAlipayTradeService serviceClient = F2FBiz.CreateClientInstance(AliConfig.serverUrl, AliConfig.appId, AliConfig.merchant_private_key, AliConfig.version,
-                                        AliConfig.sign_type, AliConfig.alipay_public_key, AliConfig.charset);
+                IAlipayTradeService serviceClient = F2FBiz.CreateClientInstance(Config.serverUrl, Config.appId, Config.merchant_private_key, Config.version,
+                                        Config.sign_type, Config.alipay_public_key, Config.charset);
 
                 //Logger.Debug("支付宝发起订单查询...\r\n订单号：" + out_trade_no);
                 AlipayF2FQueryResult queryResult = serviceClient.tradeQuery(out_trade_no);
@@ -207,6 +218,111 @@ namespace WeChatAliPayService.Common
                 //Logger.Error("订单查询环节出现错误；订单号：" + out_trade_no+"\r\n" + ex.Message);
                 return ResultEnum.FAILED;
             }
+        }
+
+        public static string AliTradePrecreate(string out_trade_no, string total_amount, string subject)
+        {
+            AlipayTradePrecreateContentBuilder builder = BuildPrecreateContent(out_trade_no, total_amount, subject);
+            AlipayF2FPrecreateResult precreateResult = serviceClient.tradePrecreate(builder);
+            string result = "";
+            switch (precreateResult.Status)
+            {
+                case ResultEnum.SUCCESS:
+                    result = precreateResult.response.QrCode;
+                    break;
+                case ResultEnum.FAILED:
+                    result = precreateResult.response.Body;
+                    break;
+                case ResultEnum.UNKNOWN:
+                    if (precreateResult.response == null)
+                    {
+                        result = "配置或网络异常，请检查后重试";
+                    }
+                    else
+                    {
+                        result = "系统异常，请更新外部订单后重新发起请求";
+                    }
+                    break;
+            }
+            return result;
+        }
+
+        /// <summary>
+        /// 构造支付请求数据
+        /// </summary>
+        /// <returns>请求数据集</returns>
+        private static AlipayTradePrecreateContentBuilder BuildPrecreateContent(string out_trade_no,string total_amount,string subject)
+        {
+            //线上联调时，请输入真实的外部订单号。
+            if (String.IsNullOrEmpty(out_trade_no))
+            {
+                out_trade_no = System.DateTime.Now.ToString("yyyyMMddHHmmss") + "0000" + (new Random()).Next(1, 10000).ToString();
+            }
+            AlipayTradePrecreateContentBuilder builder = new AlipayTradePrecreateContentBuilder();
+            //收款账号
+            builder.seller_id = Config.pid;
+            //订单编号
+            builder.out_trade_no = out_trade_no;
+            //订单总金额
+            builder.total_amount = total_amount;
+            //参与优惠计算的金额
+            //builder.discountable_amount = "";
+            //不参与优惠计算的金额
+            //builder.undiscountable_amount = "";
+            //订单名称
+            builder.subject = subject;
+            //自定义超时时间
+            builder.timeout_express = "5m";
+            //订单描述
+            builder.body = "";
+            //门店编号，很重要的参数，可以用作之后的营销
+            builder.store_id = "test store id";
+            //操作员编号，很重要的参数，可以用作之后的营销
+            builder.operator_id = "test";
+
+            //传入商品信息详情
+            List<GoodsInfo> gList = new List<GoodsInfo>();
+            GoodsInfo goods = new GoodsInfo();
+            goods.goods_id = "goods id";
+            goods.goods_name = "goods name";
+            goods.price = "0.01";
+            goods.quantity = "1";
+            gList.Add(goods);
+            builder.goods_detail = gList;
+
+            //系统商接入可以填此参数用作返佣
+            //ExtendParams exParam = new ExtendParams();
+            //exParam.sysServiceProviderId = "20880000000000";
+            //builder.extendParams = exParam;
+
+            return builder;
+
+        }
+
+        /// <summary>
+        /// 轮询
+        /// </summary>
+        /// <param name="o">订单号</param>
+        public static string LoopQuery(object o)
+        {
+            AlipayF2FQueryResult queryResult = new AlipayF2FQueryResult();
+            int count = 100;
+            int interval = 2000;
+            string out_trade_no = o.ToString();
+
+            for (int i = 1; i <= count; i++)
+            {
+                Thread.Sleep(interval);
+                queryResult = serviceClient.tradeQuery(out_trade_no);
+                if (queryResult != null)
+                {
+                    if (queryResult.Status == ResultEnum.SUCCESS)
+                    {
+                        return queryResult.response.Code;
+                    }
+                }
+            }
+            return "";
         }
 
         /// <summary>

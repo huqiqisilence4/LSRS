@@ -16,8 +16,8 @@ namespace WxPayAPI
             Log.Info("NativePay", "Native pay mode 1 url is producing...");
 
             WxPayData data = new WxPayData();
-            data.SetValue("appid", WxPayConfig.WeChatAppid);//公众帐号id
-            data.SetValue("mch_id", WxPayConfig.WeChatMchid);//商户号
+            data.SetValue("appid", WxPayConfig.Config().GetAppID());//公众帐号id
+            data.SetValue("mch_id", WxPayConfig.Config().GetMchID());//商户号
             data.SetValue("time_stamp", WxPayApi.GenerateTimeStamp());//时间戳
             data.SetValue("nonce_str", WxPayApi.GenerateNonceStr());//随机字符串
             data.SetValue("product_id", productId);//商品ID
@@ -25,7 +25,7 @@ namespace WxPayAPI
             string str = ToUrlParams(data.GetValues());//转换为URL串
             string url = "weixin://wxpay/bizpayurl?" + str;
 
-            Log.Info("NativePay", "Get native pay mode 1 url : " + url);
+            //Log.Info(this.GetType().ToString(), "Get native pay mode 1 url : " + url);
             return url;
         }
 
@@ -34,7 +34,7 @@ namespace WxPayAPI
         * @param productId 商品ID
         * @return 模式二URL
         */
-        public static string GetPayUrl(string productId)
+        public static string GetPayUrl(string productId, int money)
         {
             Log.Info("NativePay", "Native pay mode 2 url is producing...");
 
@@ -42,7 +42,7 @@ namespace WxPayAPI
             data.SetValue("body", "test");//商品描述
             data.SetValue("attach", "test");//附加数据
             data.SetValue("out_trade_no", WxPayApi.GenerateOutTradeNo());//随机字符串
-            data.SetValue("total_fee", 1);//总金额
+            data.SetValue("total_fee", money);//总金额
             data.SetValue("time_start", DateTime.Now.ToString("yyyyMMddHHmmss"));//交易起始时间
             data.SetValue("time_expire", DateTime.Now.AddMinutes(10).ToString("yyyyMMddHHmmss"));//交易结束时间
             data.SetValue("goods_tag", "jjj");//商品标记
@@ -50,8 +50,12 @@ namespace WxPayAPI
             data.SetValue("product_id", productId);//商品ID
 
             WxPayData result = WxPayApi.UnifiedOrder(data);//调用统一下单接口
-            string url = result.GetValue("code_url").ToString();//获得统一下单接口返回的二维码链接
-
+            string code = result.GetValue("return_code").ToString();
+            string url = string.Empty;
+            if (string.Compare(code, "success", true) == 0)
+                url = result.GetValue("code_url").ToString();//获得统一下单接口返回的二维码链接
+            else
+                url = result.GetValue("return_msg").ToString();
             Log.Info("NativePay", "Get native pay mode 2 url : " + url);
             return url;
         }

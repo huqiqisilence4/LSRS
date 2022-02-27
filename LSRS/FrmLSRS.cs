@@ -1399,7 +1399,7 @@ namespace LSRS
                             {
                                 if (splashScreenManager1.IsSplashFormVisible)
                                     splashScreenManager1.CloseWaitForm();
-                                FrmPay frmPay = new FrmPay((float)10.5);
+                                FrmPay frmPay = new FrmPay(1050);
                                 if(frmPay.ShowDialog()==DialogResult.OK)
                                 {
                                     if (!splashScreenManager1.IsSplashFormVisible)
